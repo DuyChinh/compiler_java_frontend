@@ -38,11 +38,11 @@ function renderExerciseList(filteredExercises) {
 
 function removeVietnameseTones(str) {
     return str
-        .normalize("NFD") // Tách các ký tự tiếng Việt thành ký tự gốc và dấu
-        .replace(/[\u0300-\u036f]/g, "") // Xóa dấu
-        .replace(/đ/g, "d") // Chuyển đổi "đ"
-        .replace(/Đ/g, "D") // Chuyển đổi "Đ"
-        .toLowerCase(); // Chuyển về chữ thường
+        .normalize("NFD") 
+        .replace(/[\u0300-\u036f]/g, "") 
+        .replace(/đ/g, "d") 
+        .replace(/Đ/g, "D") 
+        .toLowerCase(); 
 }
 
 searchExercise.addEventListener("input", () => {
@@ -104,6 +104,36 @@ document.getElementById("fileUpload").addEventListener("change", (event) => {
         reader.readAsText(file); // Đọc file dưới dạng text
     }
 });
+
+//compiler
+document.getElementById("runCode2").addEventListener("click", async function (e) {
+    e.preventDefault();
+    loader.classList.remove("hidden");
+    const code = document.getElementById("javaCode").value; 
+    const input = document.getElementById("javaInput").value; 
+    const output = document.getElementById("output"); 
+
+    try {
+        const response = await fetch("https://compilerjava-production.up.railway.app/compile", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ code, input }),
+        });
+
+        const data = await response.json();
+        if (data.error) {
+            output.value = `Error: ${data.error}`;
+        } else {
+            output.value = data.output;
+        }
+    } catch (err) {
+        output.textContent = "An error occurred: " + err.message;
+    }
+    loader.classList.add("hidden");
+});
+
 
 // Xử lý sự kiện khi nhấn nút Run Code
 document.getElementById("runCode").addEventListener("click", async function (e) {
