@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Practice Compiler</title>
+    <link rel="stylesheet" href="./assets/css/loading.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .test-case {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .test-case.passed {
+            background-color: #d4edda;
+        }
+        .test-case.failed {
+            background-color: #f8d7da;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header_left">
+            <img src="./assets/img/chinhlogo.jpg" class="logo">
+            <h2>Practice exercise</h1>
+        </div>
+        <div class="header_right">
+            <p>Home</p>
+            <p>List</p>
+            <p>youtube</p>
+            <p>fb</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <button>Ngôn ngữ hiện tại: Java</button>
+        <div class="exe_block">
+            <label for="searchExercise">Tìm kiếm bài tập:</label>
+            <input type="text" id="searchExercise" placeholder="Nhập tên bài tập...">
+            <br><br>
+            <label for="exerciseSelect" style="margin-left: 50px;">Chọn bài tập:</label>
+            <select id="exerciseSelect"></select>
+        </div>
+        <p id="exerciseDescription"></p>
+        <form id="codeForm">
+            <textarea id="javaCode" placeholder="Dán mã nguồn của bạn tại đây..."></textarea>
+            <br><br>
+            <label for="fileUpload">Nộp bài bằng file:</label>
+            <input type="file" id="fileUpload" accept=".java" />
+            <p style="margin-top: 20px;"><span style="color: red; font-size: 20px; font-weight: 600;">Lưu ý: </span>thay đổi theo đúng cấu trúc trước khi nộp bài: <pre> public class Main {
+    public static void main(String[] args) {
+    .....
+    }
+}
+            </pre>
+            </p>
+            <br><br>
+            <div class="run_status">
+                <button id="runCode">Run Code</button>
+                <div class="loader hidden"></div>
+                <p class="loader_status hidden">Please wait!!!</p>
+            </div>
+        </form>
+        
+        <!-- <button id="runCode">Run Code</button> -->
+        <h2>Test Cases:</h2>
+        <div id="testCases"></div>
+    </div>
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>
