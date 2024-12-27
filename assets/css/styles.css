@@ -109,3 +109,19 @@ input, select {
     color: #D91656;
 }
 
+.header .icon {
+    font-size: 19px;
+}
+
+.header .icon.fa-youtube {
+    color: #ff0033;
+}
+
+.header .icon.fa-facebook {
+    color:#0766ff;
+}
+
+.header .icon.fa-github {
+    color: #000;
+}
+

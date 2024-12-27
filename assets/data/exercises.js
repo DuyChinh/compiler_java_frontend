@@ -1,6 +1,14 @@
 const exercises = [
     {
         id: 1,
+        title: "#md01.Hello World!",
+        description: "In ra dòng chữ Hello World!",
+        testCases: [
+            { input: "", expected: "Hello World!"}
+        ]
+    },
+    {
+        id: 2,
         title: "#ll01.Tính tổng từ 1 đến n",
         description: "Nhập vào số nguyên n, tính tổng các số từ 1 đến n.",
         testCases: [
@@ -16,7 +24,7 @@ const exercises = [
         ]
     },    
     {
-        id: 2,
+        id: 3,
         title: "#ll02.Tính tổng các chữ số của n",
         description: "Nhập vào số nguyên n, tính tổng các chữ số của n.",
         testCases: [
