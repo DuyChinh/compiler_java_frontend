@@ -3,9 +3,11 @@ import exercises from "../data/exercises.js";
 // Giao diện bài tập
 const exerciseSelect = document.getElementById("exerciseSelect");
 const exerciseDescription = document.getElementById("exerciseDescription");
+const exeInput = document.getElementById("exeInput");
+const exeOutput = document.getElementById("exeOutput");
 const testCaseContainer = document.getElementById("testCases");
 const searchExercise = document.getElementById("searchExercise");
-const loader = document.querySelector(".loader");
+const loaders = document.querySelectorAll(".loader");
 const loader_status = document.querySelector(".loader_status");
 
 let selectedExercise = null;
@@ -18,7 +20,7 @@ exercises.forEach((exercise) => {
 });
 
 function renderExerciseList(filteredExercises) {
-    exerciseSelect.innerHTML = ""; // Xóa danh sách hiện tại
+    exerciseSelect.innerHTML = ""; 
     filteredExercises.forEach((exercise) => {
         const option = document.createElement("option");
         option.value = exercise.id;
@@ -63,6 +65,9 @@ exerciseSelect.addEventListener("change", () => {
 
     if (selectedExercise) {
         exerciseDescription.textContent = "Đề bài: " + selectedExercise.description;
+        exeInput.textContent = "Đầu vào: " + selectedExercise?.exe_input;
+        exeOutput.textContent = "Kết quả: " + selectedExercise?.exe_output;
+
 
         // Hiển thị test case
         // testCaseContainer.innerHTML = "";
@@ -108,13 +113,13 @@ document.getElementById("fileUpload").addEventListener("change", (event) => {
 //compiler
 document.getElementById("runCode2").addEventListener("click", async function (e) {
     e.preventDefault();
-    loader.classList.remove("hidden");
+    loaders[0].classList.remove("hidden");
     const code = document.getElementById("javaCode").value; 
     const input = document.getElementById("javaInput").value; 
     const output = document.getElementById("output"); 
-
+    const url = "https://compilerjava-production.up.railway.app";
     try {
-        const response = await fetch("https://compilerjava-production.up.railway.app/compile", {
+        const response = await fetch(`${url}/compile`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -131,14 +136,14 @@ document.getElementById("runCode2").addEventListener("click", async function (e)
     } catch (err) {
         output.textContent = "An error occurred: " + err.message;
     }
-    loader.classList.add("hidden");
+    loaders[0].classList.add("hidden");
 });
 
 
 // Xử lý sự kiện khi nhấn nút Run Code
 document.getElementById("runCode").addEventListener("click", async function (e) {
     e.preventDefault();
-    loader.classList.remove("hidden");
+    loaders[1].classList.remove("hidden");
     loader_status.classList.remove("hidden");
     const fileInput = document.getElementById("fileUpload");
     let code = document.getElementById("javaCode").value; 
@@ -147,10 +152,13 @@ document.getElementById("runCode").addEventListener("click", async function (e) 
         alert("Vui lòng chọn bài tập!");
         return;
     }
+    const url = "https://compilerjava-production.up.railway.app";
+    // const url = "http://localhost:3001";
 
+    
     const runPromises = selectedExercise.testCases.map(async (testCase, index) => {
         await addTest();
-        const response = await fetch("https://compilerjava-production.up.railway.app/test", {
+        const response = await fetch(`${url}/test`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -160,6 +168,7 @@ document.getElementById("runCode").addEventListener("click", async function (e) 
                 input: testCase.input,
             }),
         });
+        // cnt = 0;
         if(response.ok) {
             const result = await response.json();
             const testCaseDiv = document.getElementById(`test-case-${index}`);
@@ -171,10 +180,9 @@ document.getElementById("runCode").addEventListener("click", async function (e) 
                 testCaseDiv.classList.add("failed");
                 testCaseDiv.classList.remove("passed");
             }
-        }
+        };
     });
-
-    await Promise.all(runPromises); // Chờ tất cả test case hoàn thành
-    loader.classList.add("hidden");
+    await Promise.all(runPromises); 
+    loaders[1].classList.add("hidden");
     loader_status.classList.add("hidden");
 });

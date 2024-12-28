@@ -79,15 +79,19 @@ input, select {
     border-radius: 6px;
 }
 
-#exerciseDescription {
+#exe {
     margin-top: 15px;
     margin-bottom: 20px;
     padding: 30px 20px;
-    background: #4DA1A9;
+    background:linear-gradient(to right, rgb(253, 116, 108), rgb(255, 144, 104));
+    /* background: #4DA1A9; */
     border-radius: 5px;
     font-size: 18px;
     color: #fff;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* text-align: center; */
 }
 
 #javaCode {
@@ -127,6 +131,14 @@ input, select {
 
 .header .icon.fa-github {
     color: #000;
+}
+
+#exeInput {
+    color: #FFE31A;
+}
+
+#exeOutput {
+    color: #4F75FF;
 }
 
 /* .container #output {
