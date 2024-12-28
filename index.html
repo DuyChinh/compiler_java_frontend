@@ -86,13 +86,14 @@
             <p id="exerciseDescription"></p>
             <p id="exeInput"></p>
             <p id="exeOutput"></p>
+            <div id="table-container"></div>
         </div>
         
         <form id="codeForm">
             <textarea id="javaCode" placeholder="Dán mã nguồn của bạn tại đây..."></textarea>
             <br><br>
             <div class="compiler">
-                <input id="javaInput" type="text" placeholder="Nhập input cho mã Java (tùy chọn)">
+                <input id="javaInput" type="text" placeholder="Enter input...">
                 <button id="runCode2">run code with input</button>
                 <h3 style="margin: 10px 0;">Output:</h3>
                 <div style="display: flex; align-items: center; gap: 10px;">
@@ -115,6 +116,12 @@
                 <button id="runCode">Run Code</button>
                 <div class="loader hidden"></div>
                 <p class="loader_status hidden">Please wait!!!</p>
+                <p class="res_status_success hidden" style="color: green; font-weight: 600;">
+                    <i class="fa-regular fa-circle-check"></i> Accepted
+                </p>
+                <p class="res_status_error hidden" style="color: red; font-weight: 600;">
+                    <i class="fa-solid fa-xmark"></i> Wrong answer
+                </p>
             </div>
         </form>
         

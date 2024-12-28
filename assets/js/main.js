@@ -10,6 +10,8 @@ const searchExercise = document.getElementById("searchExercise");
 const loaders = document.querySelectorAll(".loader");
 const loader_status = document.querySelector(".loader_status");
 const language = document.getElementById("language");
+const res_status_succ = document.querySelector(".res_status_success");
+const res_status_err =  document.querySelector(".res_status_error");
 
 let selectedExercise = null;
 
@@ -59,6 +61,40 @@ searchExercise.addEventListener("input", () => {
 // Khởi tạo danh sách bài tập
 renderExerciseList(exercises);
 
+const createTable = (selectedExercise) => {
+    const tableContainer = document.getElementById("table-container");
+    tableContainer.innerHTML = ""; // Xóa toàn bộ nội dung cũ
+
+    // Tạo bảng mới
+    const table = document.createElement("table");
+    const thead = document.createElement("thead");
+    const tbody = document.createElement("tbody");
+
+    // Thêm tiêu đề bảng
+    thead.innerHTML = `
+        <tr>
+            <th>Input</th>
+            <th>Output</th>
+        </tr>
+    `;
+
+    const testCases = selectedExercise.testCases.slice(0, 2);
+    testCases.forEach(testCase => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${testCase.input}</td>
+            <td>${testCase.expected}</td>
+        `;
+        tbody.appendChild(row);
+    });
+
+    // Kết hợp các phần của bảng
+    table.appendChild(thead);
+    table.appendChild(tbody);
+
+    tableContainer.appendChild(table);
+}
+
 // Xử lý khi chọn bài tập
 exerciseSelect.addEventListener("change", () => {
     const exerciseId = parseInt(exerciseSelect.value);
@@ -68,7 +104,8 @@ exerciseSelect.addEventListener("change", () => {
         exerciseDescription.textContent = "Đề bài: " + selectedExercise.description;
         exeInput.textContent = "Đầu vào: " + selectedExercise?.exe_input;
         exeOutput.textContent = "Kết quả: " + selectedExercise?.exe_output;
-
+        createTable(selectedExercise);
+        
 
         // Hiển thị test case
         // testCaseContainer.innerHTML = "";
@@ -146,7 +183,10 @@ document.getElementById("runCode2").addEventListener("click", async function (e)
 // Xử lý sự kiện khi nhấn nút Run Code
 document.getElementById("runCode").addEventListener("click", async function (e) {
     e.preventDefault();
+    res_status_succ.classList.add("hidden");
+    res_status_err.classList.add("hidden");
     loaders[1].classList.remove("hidden");
+    loader_status.textContent = "running " + selectedExercise.title;
     loader_status.classList.remove("hidden");
     const fileInput = document.getElementById("fileUpload");
     let code = document.getElementById("javaCode").value; 
@@ -156,9 +196,7 @@ document.getElementById("runCode").addEventListener("click", async function (e) 
         return;
     }
     const url = "https://compilerjava-production.up.railway.app";
-    // const url = "http://localhost:3001";
-
-    
+    let cnt = 0;
     const runPromises = selectedExercise.testCases.map(async (testCase, index) => {
         await addTest();
         const response = await fetch(`${url}/test`, {
@@ -178,6 +216,7 @@ document.getElementById("runCode").addEventListener("click", async function (e) 
             const testCaseDiv = document.getElementById(`test-case-${index}`);
 
             if (result?.output?.trim() === testCase.expected) {
+                cnt += 1;
                 testCaseDiv.classList.add("passed");
                 testCaseDiv.classList.remove("failed");
             } else {
@@ -187,6 +226,11 @@ document.getElementById("runCode").addEventListener("click", async function (e) 
         };
     });
     await Promise.all(runPromises); 
+    if(cnt == selectedExercise.testCases.length) {
+        res_status_succ.classList.remove("hidden");
+    } else {
+        res_status_err.classList.remove("hidden");
+    }
     loaders[1].classList.add("hidden");
     loader_status.classList.add("hidden");
 });
