@@ -118,8 +118,8 @@ document.getElementById("runCode2").addEventListener("click", async function (e)
     const code = document.getElementById("javaCode").value; 
     const input = document.getElementById("javaInput").value; 
     const output = document.getElementById("output"); 
-    // const url = "https://compilerjava-production.up.railway.app";
-    const url = "http://localhost:3001";
+    const url = "https://compilerjava-production.up.railway.app";
+    // const url = "http://localhost:3001";
 
     try {
         const response = await fetch(`${url}/compile-${language.value}`, {
@@ -155,8 +155,8 @@ document.getElementById("runCode").addEventListener("click", async function (e) 
         alert("Vui lòng chọn bài tập!");
         return;
     }
-    // const url = "https://compilerjava-production.up.railway.app";
-    const url = "http://localhost:3001";
+    const url = "https://compilerjava-production.up.railway.app";
+    // const url = "http://localhost:3001";
 
     
     const runPromises = selectedExercise.testCases.map(async (testCase, index) => {
