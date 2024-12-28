@@ -11,6 +11,20 @@ const exercises = [
     },
     {
         id: 2,
+        title: "#md02.Tính tổng, hiệu, tích, thương",
+        description: "In ra dòng chữ Hello World!",
+        exe_input: "2 số nguyên a, b (0 < a, b ≤ 10^9)",
+        exe_output: "Ghi kết quả trên một dòng gồm tổng, hiệu, tích, thương(int), cách nhau bằng khoảng trắng",
+        testCases: [
+            { input: "2 3", expected: "5 -1 6 0" }, 
+            { input: "400 200", expected: "600 200 80000 2" },
+            { input: "15 12", expected: "27 3 180 1" },
+            { input: "45 12", expected: "57 33 540 3" },
+            { input: "4000 213", expected: "4213 3787 852000 18" },
+        ]
+    },
+    {
+        id: 3,
         title: "#ll01.Tính tổng từ 1 đến n",
         description: "Nhập vào số nguyên n, tính tổng các số từ 1 đến n.",
         exe_input: "Số nguyên n",
@@ -28,7 +42,7 @@ const exercises = [
         ]
     },    
     {
-        id: 3,
+        id: 4,
         title: "#ll02.Tính tổng các chữ số của n",
         description: "Nhập vào số nguyên n, tính tổng các chữ số của n.",
         exe_input: "Số nguyên n",
@@ -47,7 +61,7 @@ const exercises = [
         ]
     }, 
     {
-        id: 4,
+        id: 5,
         title: "#ll03. Tìm USCLN và BSCNN của hai số nguyên dương",
         description: "Nhập hai số nguyên dương a, b. Tính ước số chung lớn nhất (USCLN) và bội số chung nhỏ nhất (BSCNN).",
         exe_input: " Dòng đầu ghi số bộ test. Mỗi bộ test ghi trên một dòng 2 số nguyên a và b không quá 9 chữ số.",
@@ -63,7 +77,7 @@ const exercises = [
         ]
     },
     {
-        "id": 5,
+        "id": 6,
         "title": "#ll04. Tìm ước số nguyên tố lớn nhất của N",
         "description": "Cho số nguyên dương N. Hãy đưa ra ước số nguyên tố lớn nhất của N.",
         "exe_input": "Mỗi bộ test chứa một số nguyên dương N.",
@@ -82,7 +96,7 @@ const exercises = [
         ]
     },
     {
-        id: 6,
+        id: 7,
         "title": "#ll05.liệt kê và đếm",
         "description": "Cho một dãy các số nguyên dương không quá 9 chữ số, mỗi số cách nhau vài khoảng trống, có thể xuống dòng. Hãy tìm các số không giảm (các chữ số theo thứ tự từ trái qua phải tạo thành dãy không giảm) và đếm số lần xuất hiện của các số đó.",
         "exe_input": "Gồm các số nguyên dương không quá 9 chữ số. Không quá 100000 số.",
