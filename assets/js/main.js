@@ -9,6 +9,7 @@ const testCaseContainer = document.getElementById("testCases");
 const searchExercise = document.getElementById("searchExercise");
 const loaders = document.querySelectorAll(".loader");
 const loader_status = document.querySelector(".loader_status");
+const language = document.getElementById("language");
 
 let selectedExercise = null;
 
@@ -117,11 +118,11 @@ document.getElementById("runCode2").addEventListener("click", async function (e)
     const code = document.getElementById("javaCode").value; 
     const input = document.getElementById("javaInput").value; 
     const output = document.getElementById("output"); 
-    const url = "https://compilerjava-production.up.railway.app";
-    // const url = "http://localhost:3001";
+    // const url = "https://compilerjava-production.up.railway.app";
+    const url = "http://localhost:3001";
 
     try {
-        const response = await fetch(`${url}/compile`, {
+        const response = await fetch(`${url}/compile-${language.value}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -154,8 +155,8 @@ document.getElementById("runCode").addEventListener("click", async function (e) 
         alert("Vui lòng chọn bài tập!");
         return;
     }
-    const url = "https://compilerjava-production.up.railway.app";
-    // const url = "http://localhost:3001";
+    // const url = "https://compilerjava-production.up.railway.app";
+    const url = "http://localhost:3001";
 
     
     const runPromises = selectedExercise.testCases.map(async (testCase, index) => {
@@ -168,6 +169,7 @@ document.getElementById("runCode").addEventListener("click", async function (e) 
             body: JSON.stringify({
                 code,
                 input: testCase.input,
+                language: language.value,
             }),
         });
         // cnt = 0;

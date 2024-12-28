@@ -67,7 +67,14 @@
     </header>
 
     <div class="container">
-        <button>Ngôn ngữ hiện tại: Java</button>
+        <div>
+            <button>Ngôn ngữ hiện tại</button>
+            <select id="language" name="language">
+                <option value="java">Java</option>
+                <option value="cpp">C++</option>
+              </select>
+        </div>
+        
         <div class="exe_block">
             <label for="searchExercise">Tìm kiếm bài tập:</label>
             <input type="text" id="searchExercise" placeholder="Nhập tên bài tập...">
