@@ -118,6 +118,8 @@ document.getElementById("runCode2").addEventListener("click", async function (e)
     const input = document.getElementById("javaInput").value; 
     const output = document.getElementById("output"); 
     const url = "https://compilerjava-production.up.railway.app";
+    // const url = "http://localhost:3001";
+
     try {
         const response = await fetch(`${url}/compile`, {
             method: "POST",
