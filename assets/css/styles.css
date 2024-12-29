@@ -134,13 +134,6 @@ input, select {
     color: #000;
 }
 
-#exeInput {
-    color: #ff0033;
-}
-
-#exeOutput {
-    color: #4F75FF;
-}
 
 .res_status_success.hidden {
     display: none;
@@ -187,3 +180,33 @@ table {
   th {
     background-color: #f4f4f4;
   }
+
+#exe #exerciseDescription {
+    padding: 15px;
+    background: #333;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* #exeInput {
+    color: #ff0033;
+} */
+
+/* #exeOutput {
+    color: #4F75FF;
+} */
+
+
+#exe #exeInput {
+    padding: 15px;
+    background: #ff0033;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#exe #exeOutput {
+    padding: 15px;
+    background: #4F75FF;
+    border-radius: 5px;
+    color: #fff;
+}
