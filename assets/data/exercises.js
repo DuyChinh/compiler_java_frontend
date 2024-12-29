@@ -25,52 +25,52 @@ const exercises = [
     },
     {
         id: 3,
-        title: "#ll01.Tính tổng từ 1 đến n",
+        title: "#lp01.Tính tổng từ 1 đến n",
         description: "Nhập vào số nguyên n, tính tổng các số từ 1 đến n.",
         exe_input: "Số nguyên n",
         exe_output: "Ghi ra tổng",
         testCases: [
-            { input: "5", expected: "15" },   // Tổng từ 1 đến 5
-            { input: "0", expected: "0" },    // Trường hợp n = 0
-            { input: "1", expected: "1" },    // Trường hợp n = 1
-            { input: "3", expected: "6" },    // Tổng từ 1 đến 3
-            { input: "50", expected: "1275" }, // Tổng từ 1 đến 50
-            { input: "100", expected: "5050" }, // Tổng từ 1 đến 100
-            { input: "20", expected: "210" },  // Tổng từ 1 đến 20
-            { input: "7", expected: "28" },   // Tổng từ 1 đến 7
-            { input: "8", expected: "36" },   // Tổng từ 1 đến 8
+            { input: "5", expected: "15" },   
+            { input: "0", expected: "0" },    
+            { input: "1", expected: "1" },    
+            { input: "3", expected: "6" },    
+            { input: "50", expected: "1275" }, 
+            { input: "100", expected: "5050" }, 
+            { input: "20", expected: "210" },  
+            { input: "7", expected: "28" },  
+            { input: "8", expected: "36" },  
         ]
     },    
     {
         id: 4,
-        title: "#ll02.Tính tổng các chữ số của n",
+        title: "#lp02.Tính tổng các chữ số của n",
         description: "Nhập vào số nguyên n, tính tổng các chữ số của n.",
         exe_input: "Số nguyên n",
         exe_output: "Ghi tổng các chữ số của n",
         testCases: [
-            { input: "123", expected: "6" },    // 1 + 2 + 3
-            { input: "456", expected: "15" },   // 4 + 5 + 6
-            { input: "789", expected: "24" },   // 7 + 8 + 9
-            { input: "0", expected: "0" },      // Trường hợp n = 0
-            { input: "999", expected: "27" },   // 9 + 9 + 9
-            { input: "100", expected: "1" },    // 1 + 0 + 0
-            { input: "555", expected: "15" },   // 5 + 5 + 5
-            { input: "101", expected: "2" },    // 1 + 0 + 1
-            { input: "1234", expected: "10" },  // 1 + 2 + 3 + 4
+            { input: "123", expected: "6" },   
+            { input: "456", expected: "15" },   
+            { input: "789", expected: "24" },  
+            { input: "0", expected: "0" },      
+            { input: "999", expected: "27" },   
+            { input: "100", expected: "1" },    
+            { input: "555", expected: "15" },   
+            { input: "101", expected: "2" },    
+            { input: "1234", expected: "10" },  
         
         ]
     }, 
     {
         id: 5,
-        title: "#ll03. Tìm USCLN và BSCNN của hai số nguyên dương",
+        title: "#lp03. Tìm USCLN và BSCNN của hai số nguyên dương",
         description: "Nhập hai số nguyên dương a, b. Tính ước số chung lớn nhất (USCLN) và bội số chung nhỏ nhất (BSCNN).",
         exe_input: " Dòng đầu ghi số bộ test. Mỗi bộ test ghi trên một dòng 2 số nguyên a và b không quá 9 chữ số.",
         exe_output: "Ghi trên 1 dòng, lần lượt là USCLN, sau đó đến BSCNN, cách nhau bằng khoảng trống",
         testCases: [
-            { input: "12 18", expected: "6 36" },   // USCLN: 6, BSCNN: 36
-            { input: "15 20", expected: "5 60" },   // USCLN: 5, BSCNN: 60
-            { input: "7 3", expected: "1 21" },     // USCLN: 1, BSCNN: 21
-            { input: "10 25", expected: "5 50" },   // USCLN: 5, BSCNN: 50
+            { input: "12 18", expected: "6 36" },   
+            { input: "15 20", expected: "5 60" },   
+            { input: "7 3", expected: "1 21" },     
+            { input: "10 25", expected: "5 50" },   
             { input: "100 80", expected: "20 400" },
             { input: "12 34", expected: "2 204" },
             { input: "1234 5678", expected: "2 3503326" }
@@ -78,7 +78,7 @@ const exercises = [
     },
     {
         "id": 6,
-        title: "#ll04. Tìm ước số nguyên tố lớn nhất của N",
+        title: "#lp04. Tìm ước số nguyên tố lớn nhất của N",
         description: "Cho số nguyên dương N. Hãy đưa ra ước số nguyên tố lớn nhất của N.",
         exe_input: "Mỗi bộ test chứa một số nguyên dương N.",
         exe_output: "Đưa ra kết quả mỗi test theo từng dòng là ước số nguyên tố lớn nhất của N.",
@@ -97,7 +97,7 @@ const exercises = [
     },
     {
         id: 7,
-        title: "#ll05.Liệt kê và đếm",
+        title: "#lp05.Liệt kê và đếm",
         description: "Cho một dãy các số nguyên dương không quá 9 chữ số, mỗi số cách nhau vài khoảng trống, có thể xuống dòng. Hãy tìm các số không giảm (các chữ số theo thứ tự từ trái qua phải tạo thành dãy không giảm) và đếm số lần xuất hiện của các số đó.",
         exe_input: "Gồm các số nguyên dương không quá 9 chữ số. Không quá 100000 số.",
         exe_output: " Ghi ra các số không giảm kèm theo số lần xuất hiện. Các số được liệt kê theo thứ tự sắp xếp số lần xuất hiện giảm dần. Các số có số lần xuất hiện bằng nhau thì số nào xuất hiện trước in ra trước.",
@@ -106,7 +106,23 @@ const exercises = [
         ]
     },
     {
-        id: 8, 
+        id: 8,
+        title: "#str01. Đếm số kí tự là chữ, số và kí tự đặc biệt trong chuỗi",
+        description: "Viết chương trình đếm số lượng ký tự chữ cái, số và kí tự đặc biệt trong một chuỗi.",
+        exe_input: "Một chuỗi không quá 200 ký tự.",
+        exe_output: "In ra 3 số nguyên cách nhau bởi dấu cách, lần lượt là số lượng ký tự chữ cái, số và ký tự đặc biệt trong chuỗi.",
+        testCases: [
+            { input: "a!bc123@#", expected: "3 3 3" },
+            { input: "!@#$/^&*", expected: "0 0 8" }, 
+            { input: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", expected: "52 10 0" }, 
+            { input: "   ", expected: "0 0 3" }, 
+            { input: "a1!", expected: "1 1 1" }, 
+            { input: "你好123!@#", expected: "2 3 3" } 
+        ]
+        
+    },
+    {
+        id: 9, 
         title: "#str02. Chuỗi palindrome",
         description: "Viết chương trình kiểm tra xem một chuỗi có phải là palindrome hay không. Chuỗi palindrome là chuỗi đọc xuôi hay đọc ngược đều giống nhau.",
         exe_input: "Một chuỗi không quá 200 ký tự.",
@@ -118,6 +134,51 @@ const exercises = [
             { input: "A man a plan a canal PanamA", expected: "YES" },
             { input: "abccba7993hdyksdl;kdk", expected: "NO" },
             { input: "abn121nba", expected: "YES" },
+        ]
+    }, 
+    {
+        id: 10,
+        title: "#str03. Chuẩn hoá xâu họ tên",
+        description: "Một xâu họ tên được coi là viết chuẩn nếu chữ cái đầu tiên mỗi từ được viết hoa, các chữ cái khác viết thường. Các từ cách nhau đúng một dấu cách và không có khoảng trống thừa ở. đầu và cuối xâu. Hãy viết chương trình đưa các xâu họ tên về dạng chuẩn.",
+        exe_input: "Một xâu không quá 100 ký tự.",
+        exe_input: "Ghi ra xâu ký tự họ tên đã chuẩn hóa.",
+        testCases: [
+            { input: "   bUi Trung   DUY", expected: "Bui Trung Duy" },
+            { input: "tRan    TRUNG kiEN   ", expected: "Tran Trung Kien"},
+            { input: "   vO le hOA bINh   " , expected: "Vo Le Hoa Binh" },
+            { input: "   NGUYEN   VAN   AN   ", expected: "Nguyen Van An" },
+            { input: "   Pham   Minh   Khoi   ", expected: "Pham Minh Khoi" },
+            { input: "   nguyen   van   a   ", expected: "Nguyen Van A" },
+        ]
+    },
+    {
+        id: 11,
+        title: "#str04. Địa chỉ gmail",
+        description: "Địa chỉ email được tạo ra bằng cách viết đầy đủ tên và ghép với các chữ cái đầu của họ và tên đệm. Cho trước các xâu họ tên (có thể không chuẩn). Hãy tạo ra các địa email tương ứng.",
+        exe_input: "Xâu họ tên (không quá 50 ký tự)",
+        exe_output: "Ghi ra địa chỉ email tạo ra.",
+        testCases: [
+            { input: "  tRan    TRUNG kiEN   ", expected: "kientt@gmail.com"},
+            { input: "   vO le hOA bINh   " , expected: "binhvlh@gmail.com"},
+            { input: "   NGUYEN   VAN   AN   ", expected: "annv@gmail.com"},
+            { input: "   Pham   Minh   Khoi   ", expected: "khoipm@gmail.com"},
+            { input: "   ho tan  TAI   ", expected: "taiht@gmail.com"},
+            { input: "   le phAm Thanh LOng   ", expected: "longlpt@gmail.com"},
+        ]
+    },
+    {
+        id: 12,
+        title: "#str05. Rút gọn xâu kí tự.",
+        description: "Cho một xâu S. Mỗi bước, bạn được phép xóa đi 2 kí tự liền nhau mà giống nhau. Chẳng hạn xâu “aabcc” có thể trở thành “bcc” hoặc “aab” sau 1 lần xóa. Hỏi xâu cuối cùng thu được là gì? Nếu xâu rỗng, in ra “Empty String”.",
+        exe_input: "Một xâu S chỉ gồm các chữ cái thường, có độ dài không vượt quá 100.",
+        exe_output: "Ghi ra kết quả cuối cùng",
+        testCases: [
+            { input: "aaabccddd", expected: "abd" },
+            { input: "baab", expected: "Empty String" },
+            { input: "aa", expected: "Empty String" },
+            { input: "abcddcba", expected: "Empty String" },
+            { input: "abccba", expected: "Empty String" },
+            { input: "abccbccbar", expected: "abar" }
         ]
     }
 ];

@@ -104,6 +104,11 @@ input, select {
     min-width: 400px;
 }
 
+#output {
+    padding: 15px;
+    max-height: 80px;
+}
+
 #fileUpload {
     padding: 10px 10px;
     color: #fff;
