@@ -12,7 +12,7 @@ const exercises = [
     {
         id: 2,
         title: "#md02.Tính tổng, hiệu, tích, thương",
-        description: "In ra dòng chữ Hello World!",
+        description: "Cho 2 số nguyên a, b. Hãy tính tổng, hiệu, tích, thương của 2 số đó.",
         exe_input: "2 số nguyên a, b (0 < a, b ≤ 10^9)",
         exe_output: "Ghi kết quả trên một dòng gồm tổng, hiệu, tích, thương(int), cách nhau bằng khoảng trắng",
         testCases: [
@@ -25,6 +25,21 @@ const exercises = [
     },
     {
         id: 3,
+        title: "#ll00. Tổng chẵn, lẻ",
+        description: "Cho một mảng số nguyên a gồm n phần tử. Hãy tính tổng các số chẵn và tổng các số lẻ trong mảng.",
+        exe_input: "Ghi số nguyên n (1 ≤ n ≤ 10^5), tiếp theo là n số nguyên a[i] (0 ≤ a[i] ≤ 10^9).",
+        exe_output: "Ghi ra 2 số nguyên, tổng các số chẵn và tổng các số lẻ, cách nhau bởi dấu cách.",
+        testCases: [
+            { input: "6 1 2 3 4 5 3", expected: "6 12" },   
+            { input: "4 2 4 6 8", expected: "20 0" },    
+            { input: "3 1 3 5", expected: "0 9" },    
+            { input: "4 0 1 2 3", expected: "2 4" },    
+            { input: "5 4 4 4 4 4", expected: "20 0" }, 
+            { input: "5 1000000000 999999999 1000000000 999999999 0", expected: "2000000000 1999999998" }, 
+        ]
+    },
+    {
+        id: 4,
         title: "#lp01.Tính tổng từ 1 đến n",
         description: "Nhập vào số nguyên n, tính tổng các số từ 1 đến n.",
         exe_input: "Số nguyên n",
@@ -42,7 +57,7 @@ const exercises = [
         ]
     },    
     {
-        id: 4,
+        id: 5,
         title: "#lp02.Tính tổng các chữ số của n",
         description: "Nhập vào số nguyên n, tính tổng các chữ số của n.",
         exe_input: "Số nguyên n",
@@ -61,7 +76,7 @@ const exercises = [
         ]
     }, 
     {
-        id: 5,
+        id: 6,
         title: "#lp03. Tìm USCLN và BSCNN của hai số nguyên dương",
         description: "Nhập hai số nguyên dương a, b. Tính ước số chung lớn nhất (USCLN) và bội số chung nhỏ nhất (BSCNN).",
         exe_input: " Dòng đầu ghi số bộ test. Mỗi bộ test ghi trên một dòng 2 số nguyên a và b không quá 9 chữ số.",
@@ -77,7 +92,7 @@ const exercises = [
         ]
     },
     {
-        "id": 6,
+        "id": 7,
         title: "#lp04. Tìm ước số nguyên tố lớn nhất của N",
         description: "Cho số nguyên dương N. Hãy đưa ra ước số nguyên tố lớn nhất của N.",
         exe_input: "Mỗi bộ test chứa một số nguyên dương N.",
@@ -96,7 +111,7 @@ const exercises = [
         ]
     },
     {
-        id: 7,
+        id: 8,
         title: "#lp05.Liệt kê và đếm",
         description: "Cho một dãy các số nguyên dương không quá 9 chữ số, mỗi số cách nhau vài khoảng trống, có thể xuống dòng. Hãy tìm các số không giảm (các chữ số theo thứ tự từ trái qua phải tạo thành dãy không giảm) và đếm số lần xuất hiện của các số đó.",
         exe_input: "Gồm các số nguyên dương không quá 9 chữ số. Không quá 100000 số.",
@@ -106,7 +121,7 @@ const exercises = [
         ]
     },
     {
-        id: 8,
+        id: 9,
         title: "#str01. Đếm số kí tự là chữ, số và kí tự đặc biệt trong chuỗi",
         description: "Viết chương trình đếm số lượng ký tự chữ cái, số và kí tự đặc biệt trong một chuỗi.",
         exe_input: "Một chuỗi không quá 200 ký tự.",
@@ -122,7 +137,7 @@ const exercises = [
         
     },
     {
-        id: 9, 
+        id: 10, 
         title: "#str02. Chuỗi palindrome",
         description: "Viết chương trình kiểm tra xem một chuỗi có phải là palindrome hay không. Chuỗi palindrome là chuỗi đọc xuôi hay đọc ngược đều giống nhau.",
         exe_input: "Một chuỗi không quá 200 ký tự.",
@@ -137,7 +152,7 @@ const exercises = [
         ]
     }, 
     {
-        id: 10,
+        id: 11,
         title: "#str03. Chuẩn hoá xâu họ tên",
         description: "Một xâu họ tên được coi là viết chuẩn nếu chữ cái đầu tiên mỗi từ được viết hoa, các chữ cái khác viết thường. Các từ cách nhau đúng một dấu cách và không có khoảng trống thừa ở. đầu và cuối xâu. Hãy viết chương trình đưa các xâu họ tên về dạng chuẩn.",
         exe_input: "Một xâu không quá 100 ký tự.",
@@ -152,7 +167,7 @@ const exercises = [
         ]
     },
     {
-        id: 11,
+        id: 12,
         title: "#str04. Địa chỉ gmail",
         description: "Địa chỉ email được tạo ra bằng cách viết đầy đủ tên và ghép với các chữ cái đầu của họ và tên đệm. Cho trước các xâu họ tên (có thể không chuẩn). Hãy tạo ra các địa email tương ứng.",
         exe_input: "Xâu họ tên (không quá 50 ký tự)",
@@ -167,7 +182,7 @@ const exercises = [
         ]
     },
     {
-        id: 12,
+        id: 13,
         title: "#str05. Rút gọn xâu kí tự.",
         description: "Cho một xâu S. Mỗi bước, bạn được phép xóa đi 2 kí tự liền nhau mà giống nhau. Chẳng hạn xâu “aabcc” có thể trở thành “bcc” hoặc “aab” sau 1 lần xóa. Hỏi xâu cuối cùng thu được là gì? Nếu xâu rỗng, in ra “Empty String”.",
         exe_input: "Một xâu S chỉ gồm các chữ cái thường, có độ dài không vượt quá 100.",
