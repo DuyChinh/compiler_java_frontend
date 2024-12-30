@@ -195,6 +195,20 @@ const exercises = [
             { input: "abccba", expected: "Empty String" },
             { input: "abccbccbar", expected: "abar" }
         ]
+    },
+    {
+        id: 14,
+        title: "#arr01. Trộn 2 dãy và sắp xếp",
+        description: "Cho hai dãy số nguyên dương A và B không quá 100 phần tử, các giá trị trong dãy không quá 30000 và số phần tử của hai dãy bằng nhau. Hãy trộn hai dãy với nhau sao cho dãy A được đưa vào các vị trí có chỉ số chẵn, dãy B được đưa vào các vị trí có chỉ số lẻ. Đồng thời, dãy A được sắp xếp tăng dần, còn dãy B được sắp xếp giảm dần. (Chú ý: chỉ số tính từ 0)",
+        exe_input: "Ghi trên 1 dòng, đầu tiên là số phần tử của dãy, sau đó là n phần tử của dãy A, n phần tử dãy B cách nhau bởi dấu cách.",
+        exe_input: "Ghi ra dãy kết quả",
+        testCases:[
+            { input: "5 1 2 3 1 2 3 1 2 3 1", expected: "1 3 1 3 2 2 2 1 3 1" },
+            { input: "4 4 2 7 1 5 6 2 8", expected: "1 8 2 6 4 5 7 2"},
+            { input: "3 10 20 30 25 15 5", expected: "10 25 20 15 30 5" },
+            { input: "2 50 10 40 20",expected: "10 40 50 20" },
+            { input: "6 3 1 4 2 6 5 9 8 7 10 12 0", expected: "1 12 2 10 3 9 4 8 5 7 6 0" }
+        ]
     }
 ];
 
