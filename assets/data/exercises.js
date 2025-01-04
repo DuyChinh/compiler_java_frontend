@@ -209,7 +209,73 @@ const exercises = [
             { input: "2 50 10 40 20",expected: "10 40 50 20" },
             { input: "6 3 1 4 2 6 5 9 8 7 10 12 0", expected: "1 12 2 10 3 9 4 8 5 7 6 0" }
         ]
+    },
+    { 
+        id: 15,
+        title: "#arr02. Mảng đối xứng",
+        description: "Nhập một dãy số nguyên có n phần tử (n không quá 100, các phần tử trong dãy không quá 109).Hãy viết chương trình kiểm tra xem dãy có phải đối xứng hay không. Nếu đúng in ra YES, nếu sai in ra NO.",
+        exe_input: "Đầu tiên là số phần tử của dãy, sau đó ghi ra dãy đó, mỗi số cách nhau một khoảng trống.",
+        exe_output: "In ra YES nếu dãy đối xứng, ngược lại in ra NO.",
+        testCases: [
+            { input: "5 1 2 3 2 1", expected: "YES" },
+            { input: "4 1 2 3 2 1", expected: "NO" },
+            { input: "6 1 2 3 3 2 1", expected: "YES" },
+            { input: "3 1 2 1", expected: "YES" },
+            { input: "4 1 2 3 1", expected: "NO" },
+            { input: "7 1 2 3 4 3 2 1", expected: "YES" }
+        ]
+    },
+    { 
+        id: 16,
+        title: "#arr03. Số lớn thứ hai trong dãy",
+        description: "Nhập một dãy số nguyên có n phần tử (n không quá 100, các phần tử trong dãy không quá 10^9). Hãy viết chương trình tìm số lớn thứ hai trong dãy. Nếu không tồn tại số lớn thứ hai (tức tất cả các phần tử đều giống nhau hoặc chỉ có một phần tử), in ra NO.",
+        exe_input: "Đầu tiên là số phần tử của dãy, sau đó ghi ra dãy đó, mỗi số cách nhau một khoảng trống.",
+        exe_output: "In ra số lớn thứ hai nếu tồn tại, ngược lại in ra NO.",
+        testCases: [
+            { input: "5 1 2 3 4 5", expected: "4" },
+            { input: "4 10 10 10 10", expected: "NO" },
+            { input: "6 5 3 9 1 9 2", expected: "5" },
+            { input: "3 100 50 100", expected: "50" },
+            { input: "1 42", expected: "NO" },
+            { input: "5 2 3 2 3 2", expected: "2" },
+            { input: "10 1 2 3 4 5 6 7 8 9 10", expected: "9" },
+            { input: "2 1000000000 999999999", expected: "999999999" }
+        ]
+    },
+    { 
+        id: 17,
+        title: "#arr04. Số lớn thứ ba trong dãy",
+        description: "Nhập một dãy số nguyên có n phần tử (n không quá 100, các phần tử trong dãy không quá 10^9). Hãy viết chương trình tìm số lớn thứ ba trong dãy. Nếu không tồn tại số lớn thứ ba (tức là có ít hơn ba phần tử hoặc tất cả các phần tử không đủ đa dạng), in ra NO.",
+        exe_input: "Đầu tiên là số phần tử của dãy, sau đó ghi ra dãy đó, mỗi số cách nhau một khoảng trống.",
+        exe_output: "In ra số lớn thứ ba nếu tồn tại, ngược lại in ra NO.",
+        testCases: [
+            { input: "5 1 2 3 4 5", expected: "3" },
+            { input: "4 10 10 10 10", expected: "NO" },
+            { input: "6 5 3 9 1 9 2", expected: "3" },
+            { input: "3 100 50 100", expected: "50" },
+            { input: "2 42 42", expected: "NO" },
+            { input: "5 2 3 2 3 2", expected: "2" },
+            { input: "10 1 2 3 4 5 6 7 8 9 10", expected: "8" },
+            { input: "3 1000000000 999999999 999999998", expected: "999999998" }
+        ]
+    },
+    { 
+        id: 18,
+        title: "#arr4. Dãy con tăng dài nhất",
+        description: "Nhập một dãy số nguyên có n phần tử (1 ≤ n ≤ 1000, các phần tử trong dãy không vượt quá 10^9). Hãy viết chương trình tìm độ dài và dãy con tăng dài nhất trong dãy đã cho.",
+        exe_input: "Đầu tiên là số phần tử của dãy, sau đó ghi ra dãy đó, mỗi số cách nhau một khoảng trống.",
+        exe_output: "In ra độ dài của dãy con tăng dài nhất, sau đó là dãy con tăng đó. Các phần tử trong dãy con tăng cách nhau một khoảng trống. Nếu có nhiều dãy con tăng dài nhất, in ra dãy con đầu tiên tìm được.",
+        testCases: [
+            { input: "6 5 2 8 6 3 6", expected: "3 2 8 6" },
+            { input: "10 1 3 5 4 7 2 8 4 5 6", expected: "6 1 3 4 7 8 6" },
+            { input: "8 10 22 9 33 21 50 41 60", expected: "5 10 22 33 50 60" },
+            { input: "1 100", expected: "1 100" },
+            { input: "9 3 4 -1 0 6 2 3", expected: "4 3 4 6 3" },
+            { input: "4 1 2 3 4", expected: "4 1 2 3 4" },
+            { input: "12 10 22 9 33 21 50 41 60 80 1 2 3", expected: "6 10 22 33 50 60 80" }
+        ]
     }
+            
 ];
 
 export default exercises;
