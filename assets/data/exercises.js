@@ -2,6 +2,8 @@ const exercises = [
     {
         id: 1,
         title: "#md01.Hello World!",
+        type: "Begin",
+        difficulty: "Easy",
         description: "In ra dòng chữ Hello World!",
         exe_input: "Không có đầu vào.",
         exe_output: "Ghi ra Hello World!",
@@ -12,6 +14,8 @@ const exercises = [
     {
         id: 2,
         title: "#md02.Tính tổng, hiệu, tích, thương",
+        type: "Begin",
+        difficulty: "Easy",
         description: "Cho 2 số nguyên a, b. Hãy tính tổng, hiệu, tích, thương của 2 số đó.",
         exe_input: "2 số nguyên a, b (0 < a, b ≤ 10^9)",
         exe_output: "Ghi kết quả trên một dòng gồm tổng, hiệu, tích, thương(int), cách nhau bằng khoảng trắng",
@@ -26,6 +30,8 @@ const exercises = [
     {
         id: 3,
         title: "#ll00. Tổng chẵn, lẻ",
+        type: "Loop",
+        difficulty: "Easy",
         description: "Cho một mảng số nguyên a gồm n phần tử. Hãy tính tổng các số chẵn và tổng các số lẻ trong mảng.",
         exe_input: "Ghi số nguyên n (1 ≤ n ≤ 10^5), tiếp theo là n số nguyên a[i] (0 ≤ a[i] ≤ 10^9).",
         exe_output: "Ghi ra 2 số nguyên, tổng các số chẵn và tổng các số lẻ, cách nhau bởi dấu cách.",
@@ -41,6 +47,8 @@ const exercises = [
     {
         id: 4,
         title: "#lp01.Tính tổng từ 1 đến n",
+        type: "Loop",
+        difficulty: "Easy",
         description: "Nhập vào số nguyên n, tính tổng các số từ 1 đến n.",
         exe_input: "Số nguyên n",
         exe_output: "Ghi ra tổng",
@@ -60,6 +68,8 @@ const exercises = [
         id: 5,
         title: "#lp02.Tính tổng các chữ số của n",
         description: "Nhập vào số nguyên n, tính tổng các chữ số của n.",
+        type: "Loop",
+        difficulty: "Easy",
         exe_input: "Số nguyên n",
         exe_output: "Ghi tổng các chữ số của n",
         testCases: [
@@ -78,6 +88,8 @@ const exercises = [
     {
         id: 6,
         title: "#lp03. Tìm USCLN và BSCNN của hai số nguyên dương",
+        type: "Loop",
+        difficulty: "Easy",
         description: "Nhập hai số nguyên dương a, b. Tính ước số chung lớn nhất (USCLN) và bội số chung nhỏ nhất (BSCNN).",
         exe_input: " Dòng đầu ghi số bộ test. Mỗi bộ test ghi trên một dòng 2 số nguyên a và b không quá 9 chữ số.",
         exe_output: "Ghi trên 1 dòng, lần lượt là USCLN, sau đó đến BSCNN, cách nhau bằng khoảng trống",
@@ -92,37 +104,43 @@ const exercises = [
         ]
     },
     {
-        "id": 7,
+        id: 7,
         title: "#lp04. Tìm ước số nguyên tố lớn nhất của N",
+        type: "Loop",
+        difficulty: "Medium",
         description: "Cho số nguyên dương N. Hãy đưa ra ước số nguyên tố lớn nhất của N.",
         exe_input: "Mỗi bộ test chứa một số nguyên dương N.",
         exe_output: "Đưa ra kết quả mỗi test theo từng dòng là ước số nguyên tố lớn nhất của N.",
         testCases: [
-            { "input": "315", "expected": "7" },
-            { "input": "31", "expected": "31" },
-            { "input": "10", "expected": "5" },
-            { "input": "256", "expected": "2" },
-            { "input": "123456", "expected": "643" },
-            { "input": "999991", "expected": "999991" },
-            { "input": "49", "expected": "7" },
-            { "input": "77", "expected": "11" },
-            { "input": "2", "expected": "2" },
-            { "input": "987654321", "expected": "3803" }
+            { input: "315", expected: "7" },
+            { input: "31", expected: "31" },
+            { input: "10", expected: "5" },
+            { input: "256", expected: "2" },
+            { input: "123456", expected: "643" },
+            { input: "999991", expected: "999991" },
+            { input: "49", expected: "7" },
+            { input: "77", expected: "11" },
+            { input: "2", expected: "2" },
+            { input: "987654321", expected: "3803" }
         ]
     },
     {
         id: 8,
         title: "#lp05.Liệt kê và đếm",
+        type: "Loop",
+        difficulty: "Medium",
         description: "Cho một dãy các số nguyên dương không quá 9 chữ số, mỗi số cách nhau vài khoảng trống, có thể xuống dòng. Hãy tìm các số không giảm (các chữ số theo thứ tự từ trái qua phải tạo thành dãy không giảm) và đếm số lần xuất hiện của các số đó.",
         exe_input: "Gồm các số nguyên dương không quá 9 chữ số. Không quá 100000 số.",
         exe_output: " Ghi ra các số không giảm kèm theo số lần xuất hiện. Các số được liệt kê theo thứ tự sắp xếp số lần xuất hiện giảm dần. Các số có số lần xuất hiện bằng nhau thì số nào xuất hiện trước in ra trước.",
         testCases: [
-            { "input": "123 321 23456 123 123 23456 3523 123 321 4567 8988 78 7654 9899 3456 123 678 999 78 3456 987654321 4546 63543 4656 13432 4563 123471 659837 454945 34355 9087 9977 98534 3456 23134" , "expected": "123 5\n3456 3\n23456 2\n78 2\n4567 1\n678 1\n999 1" }
+            { input: "123 321 23456 123 123 23456 3523 123 321 4567 8988 78 7654 9899 3456 123 678 999 78 3456 987654321 4546 63543 4656 13432 4563 123471 659837 454945 34355 9087 9977 98534 3456 23134" , expected: "123 5\n3456 3\n23456 2\n78 2\n4567 1\n678 1\n999 1" }
         ]
     },
     {
         id: 9,
         title: "#str01. Đếm số kí tự là chữ, số và kí tự đặc biệt trong chuỗi",
+        type: "String",
+        difficulty: "Easy",
         description: "Viết chương trình đếm số lượng ký tự chữ cái, số và kí tự đặc biệt trong một chuỗi.",
         exe_input: "Một chuỗi không quá 200 ký tự.",
         exe_output: "In ra 3 số nguyên cách nhau bởi dấu cách, lần lượt là số lượng ký tự chữ cái, số và ký tự đặc biệt trong chuỗi.",
@@ -139,6 +157,8 @@ const exercises = [
     {
         id: 10, 
         title: "#str02. Chuỗi palindrome",
+        type: "String",
+        difficulty: "Easy",
         description: "Viết chương trình kiểm tra xem một chuỗi có phải là palindrome hay không. Chuỗi palindrome là chuỗi đọc xuôi hay đọc ngược đều giống nhau.",
         exe_input: "Một chuỗi không quá 200 ký tự.",
         exe_output: "In ra YES nếu chuỗi là palindrome, ngược lại in ra NO.",
@@ -154,6 +174,8 @@ const exercises = [
     {
         id: 11,
         title: "#str03. Chuẩn hoá xâu họ tên",
+        type: "String",
+        difficulty: "Easy",
         description: "Một xâu họ tên được coi là viết chuẩn nếu chữ cái đầu tiên mỗi từ được viết hoa, các chữ cái khác viết thường. Các từ cách nhau đúng một dấu cách và không có khoảng trống thừa ở. đầu và cuối xâu. Hãy viết chương trình đưa các xâu họ tên về dạng chuẩn.",
         exe_input: "Một xâu không quá 100 ký tự.",
         exe_input: "Ghi ra xâu ký tự họ tên đã chuẩn hóa.",
@@ -169,6 +191,8 @@ const exercises = [
     {
         id: 12,
         title: "#str04. Địa chỉ gmail",
+        type: "String",
+        difficulty: "Medium",
         description: "Địa chỉ email được tạo ra bằng cách viết đầy đủ tên và ghép với các chữ cái đầu của họ và tên đệm. Cho trước các xâu họ tên (có thể không chuẩn). Hãy tạo ra các địa email tương ứng.",
         exe_input: "Xâu họ tên (không quá 50 ký tự)",
         exe_output: "Ghi ra địa chỉ email tạo ra.",
@@ -184,6 +208,8 @@ const exercises = [
     {
         id: 13,
         title: "#str05. Rút gọn xâu kí tự.",
+        type: "String",
+        difficulty: "Advanced",
         description: "Cho một xâu S. Mỗi bước, bạn được phép xóa đi 2 kí tự liền nhau mà giống nhau. Chẳng hạn xâu “aabcc” có thể trở thành “bcc” hoặc “aab” sau 1 lần xóa. Hỏi xâu cuối cùng thu được là gì? Nếu xâu rỗng, in ra “Empty String”.",
         exe_input: "Một xâu S chỉ gồm các chữ cái thường, có độ dài không vượt quá 100.",
         exe_output: "Ghi ra kết quả cuối cùng",
@@ -199,20 +225,26 @@ const exercises = [
     {
         id: 14,
         title: "#arr01. Trộn 2 dãy và sắp xếp",
+        type: "Array",
+        difficulty: "Easy",
         description: "Cho hai dãy số nguyên dương A và B không quá 100 phần tử, các giá trị trong dãy không quá 30000 và số phần tử của hai dãy bằng nhau. Hãy trộn hai dãy với nhau sao cho dãy A được đưa vào các vị trí có chỉ số chẵn, dãy B được đưa vào các vị trí có chỉ số lẻ. Đồng thời, dãy A được sắp xếp tăng dần, còn dãy B được sắp xếp giảm dần. (Chú ý: chỉ số tính từ 0)",
         exe_input: "Ghi trên 1 dòng, đầu tiên là số phần tử của dãy, sau đó là n phần tử của dãy A, n phần tử dãy B cách nhau bởi dấu cách.",
-        exe_input: "Ghi ra dãy kết quả",
+        exe_output: "Ghi ra dãy kết quả",
         testCases:[
             { input: "5 1 2 3 1 2 3 1 2 3 1", expected: "1 3 1 3 2 2 2 1 3 1" },
             { input: "4 4 2 7 1 5 6 2 8", expected: "1 8 2 6 4 5 7 2"},
             { input: "3 10 20 30 25 15 5", expected: "10 25 20 15 30 5" },
             { input: "2 50 10 40 20",expected: "10 40 50 20" },
-            { input: "6 3 1 4 2 6 5 9 8 7 10 12 0", expected: "1 12 2 10 3 9 4 8 5 7 6 0" }
+            { input: "6 3 1 4 2 6 5 9 8 7 10 12 0", expected: "1 12 2 10 3 9 4 8 5 7 6 0" },
+            { input: "4 1 2 3 4 4 3 2 1", expected: "1 4 2 3 3 2 4 1" },
+            { input: "5 1 2 3 4 5 5 4 3 2 1", expected: "1 5 2 4 3 3 4 2 5 1" }
         ]
     },
     { 
         id: 15,
         title: "#arr02. Mảng đối xứng",
+        type: "Array",
+        difficulty: "Easy",
         description: "Nhập một dãy số nguyên có n phần tử (n không quá 100, các phần tử trong dãy không quá 109).Hãy viết chương trình kiểm tra xem dãy có phải đối xứng hay không. Nếu đúng in ra YES, nếu sai in ra NO.",
         exe_input: "Đầu tiên là số phần tử của dãy, sau đó ghi ra dãy đó, mỗi số cách nhau một khoảng trống.",
         exe_output: "In ra YES nếu dãy đối xứng, ngược lại in ra NO.",
@@ -228,6 +260,8 @@ const exercises = [
     { 
         id: 16,
         title: "#arr03. Số lớn thứ hai trong dãy",
+        type: "Array",
+        difficulty: "Easy",
         description: "Nhập một dãy số nguyên có n phần tử (n không quá 100, các phần tử trong dãy không quá 10^9). Hãy viết chương trình tìm số lớn thứ hai trong dãy. Nếu không tồn tại số lớn thứ hai (tức tất cả các phần tử đều giống nhau hoặc chỉ có một phần tử), in ra NO.",
         exe_input: "Đầu tiên là số phần tử của dãy, sau đó ghi ra dãy đó, mỗi số cách nhau một khoảng trống.",
         exe_output: "In ra số lớn thứ hai nếu tồn tại, ngược lại in ra NO.",
@@ -245,6 +279,8 @@ const exercises = [
     { 
         id: 17,
         title: "#arr04. Số lớn thứ ba trong dãy",
+        type: "Array",
+        difficulty: "Easy",
         description: "Nhập một dãy số nguyên có n phần tử (n không quá 100, các phần tử trong dãy không quá 10^9). Hãy viết chương trình tìm số lớn thứ ba trong dãy. Nếu không tồn tại số lớn thứ ba (tức là có ít hơn ba phần tử hoặc tất cả các phần tử không đủ đa dạng), in ra NO.",
         exe_input: "Đầu tiên là số phần tử của dãy, sau đó ghi ra dãy đó, mỗi số cách nhau một khoảng trống.",
         exe_output: "In ra số lớn thứ ba nếu tồn tại, ngược lại in ra NO.",
@@ -261,7 +297,9 @@ const exercises = [
     },
     { 
         id: 18,
-        title: "#arr4. Dãy con tăng dài nhất",
+        title: "#arr05. Dãy con tăng dài nhất",
+        type: "Array",
+        difficulty: "Medium",
         description: "Nhập một dãy số nguyên có n phần tử (1 ≤ n ≤ 1000, các phần tử trong dãy không vượt quá 10^9). Hãy viết chương trình tìm độ dài và dãy con tăng dài nhất trong dãy đã cho.",
         exe_input: "Đầu tiên là số phần tử của dãy, sau đó ghi ra dãy đó, mỗi số cách nhau một khoảng trống.",
         exe_output: "In ra độ dài của dãy con tăng dài nhất, sau đó là dãy con tăng đó. Các phần tử trong dãy con tăng cách nhau một khoảng trống. Nếu có nhiều dãy con tăng dài nhất, in ra dãy con đầu tiên tìm được.",
@@ -274,8 +312,228 @@ const exercises = [
             { input: "4 1 2 3 4", expected: "4 1 2 3 4" },
             { input: "12 10 22 9 33 21 50 41 60 80 1 2 3", expected: "6 10 22 33 50 60 80" }
         ]
-    }
-            
+    },
+    //newest
+    {
+        id: 19,
+        title: "#arr06. Dãy con tổng lớn nhất",
+        type: "Array",
+        difficulty: "Medium",
+        description: "Nhập một dãy số nguyên có n phần tử (1 ≤ n ≤ 1000, các phần tử trong dãy không vượt quá 10^9). Hãy viết chương trình tìm tổng lớn nhất và dãy con có tổng lớn nhất trong dãy đã cho.",
+        exe_input: "Đầu tiên là số phần tử của dãy, sau đó ghi ra dãy đó, mỗi số cách nhau một khoảng trống.",
+        exe_output: "In ra tổng lớn nhất của dãy con, sau đó là dãy con đó. Các phần tử trong dãy con cách nhau một khoảng trống. Nếu có nhiều dãy con có tổng lớn nhất, in ra dãy con đầu tiên tìm được.",
+        testCases: [
+            { input: "6 -2 1 -3 4 -1 2 1 -5 4", expected: "6 4 -1 2 1" },
+            { input: "5 1 2 3 -4 5", expected: "7 1 2 3 -4 5" },
+            { input: "10 -1 -2 -3 -4 -5 -6 -7 -8 -9 -10", expected: "-1 -1" },
+            { input: "4 4 -1 2 1", expected: "6 4 -1 2 1" },
+            { input: "7 1 2 3 4 -5 6", expected: "11 1 2 3 4" }
+        ]
+    },
+    {
+        id: 20,
+        title: "#arr07. Dãy số Fibonacci",
+        type: "Array",
+        difficulty: "Easy",
+        description: "Dãy số Fibonacci được định nghĩa như sau: F0 = 0, F1 = 1; Fi = Fi-1 + Fi-2. Nhập n, với 2 ≤ n ≤ 90. Hãy viết chương trình in ra n số Fibonacci đầu tiên.",
+        exe_input: "Một số nguyên n (2 ≤ n ≤ 90).",
+        exe_output: "In ra n số Fibonacci đầu tiên, mỗi số cách nhau một khoảng trống.",
+        testCases: [
+            { input: "2", expected: "0 1" },
+            { input: "5", expected: "0 1 1 2 3" },
+            { input: "10", expected: "0 1 1 2 3 5 8 13 21 34" },
+            { input: "15", expected: "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377" },
+            { input: "20", expected: "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181" },
+            { input: "25", expected: "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 10946 17711 28657 46368" }
+        ]
+    },
+    {
+        id: 21,
+        title: "#arr08. Xoay vòng dãy số",
+        type: "Array",
+        difficulty: "Advanced",
+        description: "Cho một dãy số nguyên gồm n phần tử (1 ≤ n ≤ 10^5, các phần tử không vượt quá 10^9). Hãy xoay dãy số k lần theo chiều kim đồng hồ.",
+        exe_input: "Dòng đầu tiên là hai số nguyên n và k (0 ≤ k ≤ 10^9). Dòng tiếp theo là n số nguyên cách nhau một khoảng trống.",
+        exe_output: "In ra dãy số sau khi đã xoay k lần.",
+        testCases: [
+            { input: "5 2 1 2 3 4 5", expected: "4 5 1 2 3" },
+            { input: "4 1 10 20 30 40", expected: "40 10 20 30" },
+            { input: "6 6 1 1 1 1 1 1", expected: "1 1 1 1 1 1" },
+            { input: "8 3 1 2 3 4 5 6 7 8", expected: "6 7 8 1 2 3 4 5" },
+            { input: "3 0 10 20 30", expected: "10 20 30" },
+            { input: "7 4 5 6 7 8 9 10 11", expected: "8 9 10 11 5 6 7" },
+            { input: "9 12 1 2 3 4 5 6 7 8 9", expected: "4 5 6 7 8 9 1 2 3" }
+        ]
+    },
+    {
+        id: 22,
+        title: "#setmap01. Lọc số trùng lặp",
+        type: "Set/Map",
+        difficulty: "Easy",
+        description: "Cho một mảng số nguyên, hãy loại bỏ các số trùng lặp và in ra mảng kết quả.",
+        exe_input: "Đầu tiên là một số nguyên n (1 ≤ n ≤ 10^5), tiếp theo là n số nguyên cách nhau một khoảng trống.",
+        exe_output: "In ra các số trong mảng sau khi đã loại bỏ trùng lặp, cách nhau một khoảng trống.",
+        testCases: [
+            { input: "8 1 2 3 2 4 5 1 6", expected: "1 2 3 4 5 6" },
+            { input: "5 10 20 30 40 50", expected: "10 20 30 40 50" },
+            { input: "6 1 1 1 1 1 1", expected: "1" },
+            { input: "4 10 20 20 10", expected: "10 20" },
+            { input: "7 1 2 3 4 5 6 7", expected: "1 2 3 4 5 6 7" },
+            { input: "9 1 2 3 4 5 6 7 8 9", expected: "1 2 3 4 5 6 7 8 9" }
+        ]
+    },
+    {
+        id: 23,
+        title: "#setmap02. Đếm phần tử duy nhất",
+        type: "Set/Map",
+        difficulty: "Easy",
+        description: "Cho một mảng số nguyên, hãy đếm số phần tử khác nhau trong mảng.",
+        exe_input: "Đầu tiên là một số nguyên n (1 ≤ n ≤ 10^5), tiếp theo là n số nguyên cách nhau một khoảng trống.",
+        exe_output: "In ra số lượng phần tử khác nhau trong mảng.",
+        testCases: [
+            { input: "7 10 20 30 10 20 40 50", expected: "5" },
+            { input: "5 1 1 1 1 1", expected: "1" },
+            { input: "4 2 4 6 8", expected: "4" },
+            { input: "6 100 200 300 400 100 200", expected: "4" },
+            { input: "3 1 2 3", expected: "3" },
+            { input: "9 1 2 3 4 5 6 7 8 9", expected: "9" }
+        ]
+    },
+    {
+        id: 24,
+        title: "#setmap03. Lưu trữ và tìm kiếm",
+        type: "Set/Map",
+        difficulty: "Medium",
+        description: "Sử dụng HashMap để lưu trữ tên và số điện thoại. Sau đó, tìm kiếm số điện thoại theo tên.",
+        exe_input: "Đầu tiên là một số nguyên n (1 ≤ n ≤ 10^5). Tiếp theo là n cặp, mỗi dòng chứa một cặp tên và số điện thoại.Cuối cùng là tên cần tìm.",
+        exe_output: "In ra số điện thoại của tên đã cho. Nếu không tìm thấy, in 'Not Found'.",
+        testCases: [
+            { input: "3 Nam 0123456789 Hoa 0987654321 An 0111222333 Hoa", expected: "0987654321" },
+            { input: "2 Minh 1234567890 Lan 9876543210 Minh", expected: "1234567890" },
+            { input: "1 Nam 0123456789 An", expected: "Not Found" },
+            { input: "4 An 1234567890 Binh 0987654321 Cuong 0987654321 Dung 0123456789 Cuong", expected: "0987654321" },
+            { input: "5 An 1234567890 Binh 0987654321 Cuong 0987654321 Dung 0123456789 Hoa 0987654321 Hoa", expected: "0987654321" },
+            { input: "3 An 1234567890 Binh 0987654321 Cuong 0987654321 Dung", expected: "Not Found" }
+        ]
+    },
+    {
+        id: 25,
+        title: "#setmap04. Đếm số lần xuất hiện",
+        type: "Set/Map",
+        difficulty: "Medium",
+        description: "Cho một chuỗi các từ, hãy đếm số lần mỗi từ xuất hiện.",
+        exe_input: "Đầu vào chứa một chuỗi các từ, mỗi từ cách nhau một khoảng trống.",
+        exe_output: "In ra mỗi từ và số lần xuất hiện của nó, mỗi từ trên một dòng theo định dạng 'từ: số_lần'.",
+        testCases: [
+            { input: "Java is fun and Java is powerful", expected: "Java: 2\nis: 2\nfun: 1\nand: 1\npowerful: 1" },
+            { input: "hello world hello everyone", expected: "hello: 2\nworld: 1\neveryone: 1" },
+            { input: "one two two three three three", expected: "one: 1\ntwo: 2\nthree: 3" },
+            { input: "viet nam muon nam dang cong san viet nam muon nam", expected: "viet: 2\nnam: 2\nmuon: 2\ndang: 1\ncong: 1\nsan: 1" },
+            { input: "i like playing soccer because soccer is fun", expected: "i: 1\nlike: 1\nplaying: 1\nsoccer: 2\nbecause: 1\nis: 1\nfun: 1" },
+            { input: "i am a student i am a student i am a student many student love school", expected: "i: 3\nam: 3\na: 3\nstudent: 4\nmany: 1\nlove: 1\nschool: 1" }
+        ]
+    },
+    {
+        id: 26,
+        title: "#setmap05. Giao của hai tập hợp",
+        type: "Set/Map",
+        difficulty: "Medium",
+        description: "Cho hai mảng số nguyên, hãy tìm giao của hai mảng.",
+        exe_input: "Đầu tiên là hai số nguyên n và m (1 ≤ n, m ≤ 10^5), tiếp theo là n số nguyên của mảng thứ nhất, tiếp theo là m số nguyên của mảng thứ hai.",
+        exe_output: "In ra giao của hai mảng, các phần tử cách nhau một khoảng trống.",
+        testCases: [
+            { input: "5 4 1 2 3 4 5 3 4 5 6", expected: "3 4 5" },
+            { input: "6 6 1 2 3 4 5 6 2 4 6 8 10 12", expected: "2 4 6" },
+            { input: "3 3 1 2 3 4 5 6", expected: "" },
+            { input: "4 5 1 2 3 4 5 6 7 8 9", expected: "1 2 3 4 5" },
+            { input: "3 3 1 2 3 1 2 3", expected: "1 2 3" },
+            { input: "7 8 1 2 3 4 5 6 7 2 4 6 8 10 12", expected: "2 4 6" }
+        ]
+    },
+    {
+        id: 27,
+        title: "#setmap06. Tìm số phổ biến nhất",
+        type: "Set/Map",
+        difficulty: "Medium",
+        description: "Cho một mảng số nguyên, hãy tìm số xuất hiện nhiều nhất.",
+        exe_input: "Đầu tiên là một số nguyên n (1 ≤ n ≤ 10^5), tiếp theo là n số nguyên cách nhau một khoảng trống.",
+        exe_output: "In ra số xuất hiện nhiều nhất. Nếu có nhiều số cùng tần suất, in số nhỏ nhất.",
+        testCases: [
+            { input: "10 1 2 3 4 2 2 3 3 3 4", expected: "3" },
+            { input: "7 10 20 20 10 10 20", expected: "10" },
+            { input: "5 5 5 5 5", expected: "5" },
+            { input: "6 1 2 3 4 5 6", expected: "1" },
+            { input: "10 1 2 3 4 2 2 3 3 3 4", expected: "3" },
+            { input: "7 10 20 20 10 10 20", expected: "10" },
+            { input: "5 5 5 5 5", expected: "5" },
+        ]
+    },
+    {
+        id: 28,
+        title: "#setmap07. Tìm số nhỏ nhất không xuất hiện",
+        type: "Set/Map",
+        difficulty: "Medium",
+        description: "Cho một mảng số nguyên không âm. Hãy tìm số nguyên dương nhỏ nhất không xuất hiện trong mảng.",
+        exe_input: "Đầu tiên là một số nguyên n (1 ≤ n ≤ 10^5), tiếp theo là n số nguyên cách nhau một khoảng trống.",
+        exe_output: "In ra số nguyên dương nhỏ nhất không xuất hiện trong mảng.",
+        testCases: [
+            { input: "6 1 2 3 5 6 7", expected: "4" },
+            { input: "5 1 3 6 7 8", expected: "2" },
+            { input: "4 2 3 4 5", expected: "1" },
+            { input: "3 1 2 3", expected: "4" },
+            { input: "7 1 2 3 4 5 6 7", expected: "8" },
+            { input: "6 1 2 3 4 5 6", expected: "7" },
+            { input: "5 1 2 3 4 5", expected: "6" }
+        ]
+    },
+    {
+        id: 29,
+        title: "#fun01. Tìm số chẵn lớn nhất",
+        type: "Function",
+        difficulty: "Easy",
+        description: "Cho một mảng số nguyên. Hãy tìm số chẵn lớn nhất trong mảng. Nếu không có số chẵn, in ra -1.",
+        exe_input: "Đầu tiên là một số nguyên n (1 ≤ n ≤ 10^5), tiếp theo là n số nguyên cách nhau một khoảng trống.",
+        exe_output: "In ra số chẵn lớn nhất trong mảng hoặc -1 nếu không có số chẵn.",
+        testCases: [
+            { input: "6 1 2 3 4 5 6", expected: "6" },
+            { input: "4 7 5 3 9", expected: "-1" },
+            { input: "5 10 15 20 25 30", expected: "30" },
+            { input: "3 4 8 16", expected: "16" },
+            { input: "2 -2 -4", expected: "-2" }
+        ]
+    },
+    {
+        id: 30,
+        title: "#fun02. Tìm số nhỏ nhất xuất hiện hơn một lần",
+        type: "Function",
+        difficulty: "Easy",
+        description: "Cho một mảng số nguyên. Hãy tìm số nhỏ nhất xuất hiện nhiều hơn một lần trong mảng. Nếu không có, in ra -1.",
+        exe_input: "Đầu tiên là một số nguyên n (1 ≤ n ≤ 10^5), tiếp theo là n số nguyên cách nhau một khoảng trống.",
+        exe_output: "In ra số nhỏ nhất xuất hiện hơn một lần hoặc -1 nếu không có số nào như vậy.",
+        testCases: [
+            { input: "6 1 2 2 3 4 5", expected: "2" },
+            { input: "4 1 3 3 4", expected: "3" },
+            { input: "5 5 5 6 7", expected: "5" },
+            { input: "3 1 2 3", expected: "-1" },
+            { input: "7 10 20 10 30 20 10", expected: "10" }
+        ]
+    },
+    {
+        id: 31,
+        type: "Function",
+        difficulty: "Medium",
+        title: "#fun03. Kiểm tra mảng có phải dãy số liên tiếp",
+        "description": "Cho một mảng số nguyên dương. Hãy kiểm tra xem các số trong mảng có tạo thành một dãy số liên tiếp hay không (các số không cần sắp xếp).",
+        "exe_input": "Đầu tiên là một số nguyên n (1 ≤ n ≤ 10^5), tiếp theo là n số nguyên cách nhau một khoảng trống.",
+        "exe_output": "In ra 'YES' nếu các số trong mảng tạo thành một dãy liên tiếp, ngược lại in ra 'NO'.",
+        "testCases": [
+            { input: "5 1 2 3 4 5", expected: "YES" },
+            { input: "4 10 11 12 13", expected: "YES" },
+            { input: "6 3 5 6 7 8 10", expected: "NO" },
+            { input: "3 1 3 2", expected: "YES" },
+            { input: "4 7 8 9 11", expected: "NO" }
+        ]
+    }              
 ];
 
 export default exercises;

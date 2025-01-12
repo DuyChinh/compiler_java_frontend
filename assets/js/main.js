@@ -12,6 +12,88 @@ const loader_status = document.querySelector(".loader_status");
 const language = document.getElementById("language");
 const res_status_succ = document.querySelector(".res_status_success");
 const res_status_err =  document.querySelector(".res_status_error");
+const url = "https://compilerjava-production.up.railway.app";
+
+// Dữ liệu ví dụ về bài tập
+const filterByType = document.getElementById("filterByType");
+
+filterByType?.addEventListener("change", () => {
+    const selectedType = filterByType.value;
+    renderExerciseTable(selectedType);
+});
+
+
+// Hàm hiển thị dữ liệu bài tập vào bảng
+function renderExerciseTable(filterType = "all") {
+    const exerciseTable = document.getElementById("exerciseTable");
+    exerciseTable.innerHTML = "";
+    const filteredExercises = filterType === "all"
+        ? exercises
+        : exercises.filter((exercise) => exercise.type.toLowerCase() === filterType.toLowerCase());
+    
+    filteredExercises.forEach((exercise) => {
+        const row = document.createElement("tr");
+        row.classList.add("table-info"); 
+
+        // Cột Tên Bài Tập
+        const nameCell = document.createElement("td");
+        nameCell.textContent = exercise?.title;
+
+        // Cột Loại
+        const typeCell = document.createElement("td");
+        typeCell.textContent = exercise?.type;
+        typeCell.classList.add("text-center");
+
+        // Cột Độ Khó
+        const difficultyCell = document.createElement("td");
+        const badge = document.createElement("span");
+        badge.textContent = exercise?.difficulty;
+
+        // Thêm màu sắc cho badge dựa trên độ khó
+        if (exercise?.difficulty.toLowerCase() === "easy") {
+            badge.classList.add("badge", "bg-success"); // Xanh lá
+        } else if (exercise?.difficulty.toLowerCase() === "medium") {
+            badge.classList.add("badge", "bg-warning"); // Vàng
+        } else if (exercise?.difficulty.toLowerCase() === "advanced") {
+            badge.classList.add("badge", "bg-danger"); // Đỏ
+        }
+
+        difficultyCell.appendChild(badge);
+        difficultyCell.classList.add("text-center");
+
+        // Thêm các cột vào dòng
+        row.appendChild(nameCell);
+        row.appendChild(typeCell);
+        row.appendChild(difficultyCell);
+
+        // Thêm dòng vào bảng
+        exerciseTable.appendChild(row);
+    });
+    handleChooseExe();
+}
+
+const handleChooseExe = () => {
+    const tableInfo = document.getElementsByClassName("table-info");
+    const filteredExercises = Array.from(tableInfo).map((row, index) => ({
+        element: row,
+        exercise: exercises[index],
+    }));
+
+    filteredExercises.forEach(({ element, exercise }) => {
+        element.addEventListener("click", () => {
+            exerciseSelect.value = exercise.id;
+            exerciseSelect.dispatchEvent(new Event("change"));
+            window.location.href = "index.html";
+        });
+    });
+};
+
+
+// Gọi hàm để hiển thị bảng
+if(filterByType) {
+    renderExerciseTable();
+}
+
 
 let selectedExercise = null;
 
@@ -155,7 +237,7 @@ document.getElementById("runCode2").addEventListener("click", async function (e)
     const code = document.getElementById("javaCode").value; 
     const input = document.getElementById("javaInput").value; 
     const output = document.getElementById("output"); 
-    const url = "https://compilerjava-production.up.railway.app";
+    // const url = "https://compilerjava-production.up.railway.app";
     // const url = "http://localhost:3001";
 
     try {
@@ -179,8 +261,50 @@ document.getElementById("runCode2").addEventListener("click", async function (e)
     loaders[0].classList.add("hidden");
 });
 
+// Bảng kết quả
+const resultTable = document.getElementById("resultTable");
 
-// Xử lý sự kiện khi nhấn nút Run Code
+// Hàm cập nhật bảng kết quả
+function updateResultTable(num_test) {
+    const row = document.createElement("tr");
+    if (num_test === selectedExercise.testCases.length) {
+        row.classList.add("table-success"); 
+    } else {
+        row.classList.add("table-danger"); 
+    }
+
+    // Cột Thời Gian Nộp
+    const timeCell = document.createElement("td");
+    const currentTime = new Date();
+    timeCell.textContent = currentTime.toLocaleString(); 
+    timeCell.classList.add("text-center");
+
+    // Cột Tên Bài Tập
+    const nameCell = document.createElement("td");
+    nameCell.textContent = selectedExercise.title;
+
+    // Cột Test Cases (Đúng/All)
+    const testCaseCell = document.createElement("td");
+    testCaseCell.innerHTML = `<span class="badge bg-primary" style="font-size: 16px">${num_test}/${selectedExercise.testCases.length}</span>`;
+    testCaseCell.classList.add("text-center");
+
+
+    // Cột Trạng Thái
+    const statusCell = document.createElement("td");
+    statusCell.textContent = num_test === selectedExercise.testCases.length ? "AC" : "WA";
+    statusCell.classList.add(num_test === selectedExercise.testCases.length ? "text-success" : "text-danger");
+    statusCell.classList.add("text-center");
+    // Thêm các cột vào dòng
+    row.appendChild(nameCell);
+    row.appendChild(timeCell);
+    row.appendChild(testCaseCell);
+    row.appendChild(statusCell);
+
+    // Thêm dòng vào bảng
+    resultTable.appendChild(row);
+}
+
+// Gọi hàm updateResultTable khi các test cases được kiểm tra xong
 document.getElementById("runCode").addEventListener("click", async function (e) {
     e.preventDefault();
     res_status_succ.classList.add("hidden");
@@ -195,7 +319,8 @@ document.getElementById("runCode").addEventListener("click", async function (e) 
         alert("Vui lòng chọn bài tập!");
         return;
     }
-    const url = "https://compilerjava-production.up.railway.app";
+    // const url = "http://localhost:3001";
+
     let cnt = 0;
     const runPromises = selectedExercise.testCases.map(async (testCase, index) => {
         await addTest();
@@ -210,7 +335,6 @@ document.getElementById("runCode").addEventListener("click", async function (e) 
                 language: language.value,
             }),
         });
-        // cnt = 0;
         if(response.ok) {
             const result = await response.json();
             const testCaseDiv = document.getElementById(`test-case-${index}`);
@@ -233,4 +357,8 @@ document.getElementById("runCode").addEventListener("click", async function (e) 
     }
     loaders[1].classList.add("hidden");
     loader_status.classList.add("hidden");
+
+    // Cập nhật bảng kết quả sau khi chạy xong
+    updateResultTable(cnt);
 });
+

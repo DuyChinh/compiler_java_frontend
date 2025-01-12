@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 a {
@@ -34,7 +34,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 35px 20px;
 }
 
 .header a {
@@ -100,13 +100,10 @@ input, select {
     min-height: 300px;
 }
 
-#javaInput, #output {
-    min-width: 400px;
-}
 
-#output {
+#output, #javaInput {
     padding: 15px;
-    max-height: 70px;
+    max-height: 100px;
 }
 
 #fileUpload {
