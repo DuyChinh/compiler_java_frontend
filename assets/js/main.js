@@ -288,6 +288,13 @@ function updateResultTable(num_test) {
     testCaseCell.innerHTML = `<span class="badge bg-primary" style="font-size: 16px">${num_test}/${selectedExercise.testCases.length}</span>`;
     testCaseCell.classList.add("text-center");
 
+    const languageCell = document.createElement("td");
+    languageCell.textContent = language.value;
+    languageCell.classList.add("text-center");
+    languageCell.classList.add("text-uppercase");
+
+
+
 
     // Cột Trạng Thái
     const statusCell = document.createElement("td");
@@ -298,6 +305,7 @@ function updateResultTable(num_test) {
     row.appendChild(nameCell);
     row.appendChild(timeCell);
     row.appendChild(testCaseCell);
+    row.appendChild(languageCell);
     row.appendChild(statusCell);
 
     // Thêm dòng vào bảng
