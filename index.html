@@ -156,6 +156,34 @@
             </tbody>
         </table>
     </div>
+
+    <div class="container">
+        <h1>Danh Sách Bài Tập</h1>
+        <div class="container mt-4 d-flex align-items-center gap-3 mb-2">
+            <label for="filterByType" class="form-label">Loại: </label>
+            <select id="filterByType" class="form-select" style="max-width: 200px;">
+                <option value="all">Tất cả</option>
+                <option value="begin">Begin</option>
+                <option value="string">String</option>
+                <option value="array">Array</option>
+                <option value="set/map">Set/Map</option>
+                <option value="function">Function</option>
+            </select>
+        </div>
+
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Tên Bài Tập</th>
+                    <th scope="col" class="text-center">Loại</th>
+                    <th scope="col" class="text-center">Độ Khó</th>
+                </tr>
+            </thead>
+            <tbody id="exerciseTable">
+                <!-- Các dòng dữ liệu sẽ được thêm động ở đây -->
+            </tbody>
+        </table>
+    </div>
     
     <footer class="footer">
         <p class="cp-text">
