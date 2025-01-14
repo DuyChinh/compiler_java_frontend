@@ -603,8 +603,112 @@ const exercises = [
                 expected: "Ethan 22 6.8\nNoah 23 7.9"
             }
         ]
+    },
+    {
+        id: 34,
+        type: "OOP",
+        difficulty: "Easy",
+        title: "#oop3. Tính chu vi và diện tích hình chữ nhật",
+        description: "Xây dựng một lớp Rectangle để lưu trữ thông tin về hai cạnh của hình chữ nhật. Viết chương trình nhập vào hai cạnh hình chữ nhật, tạo đối tượng hình chữ nhật và tính chu vi, diện tích.",
+        exe_input: "Đầu tiên là một số nguyên n (1 ≤ n ≤ 100), tiếp theo là n dòng, mỗi dòng chứa hai số nguyên dương a và b là hai cạnh của hình chữ nhật.",
+        exe_output: "In ra chu vi và diện tích của từng hình chữ nhật theo định dạng: '<chu vi> <diện tích>'.",
+        testCases: [
+            {
+                input: "2\n4 5\n6 7",
+                expected: "18 20\n26 42"
+            },
+            {
+                input: "1\n10 20",
+                expected: "60 200"
+            },
+            {
+                input: "3\n2 3\n8 9\n5 6",
+                expected: "10 6\n34 72\n22 30"
+            },
+            {
+                input: "4\n1 2\n3 4\n5 5\n6 10",
+                expected: "6 2\n14 12\n20 25\n32 60"
+            },
+            {
+                input: "2\n12 15\n7 8",
+                expected: "54 180\n30 56"
+            },
+            {
+                input: "3\n9 10\n11 12\n13 14",
+                expected: "38 90\n46 132\n54 182"
+            }
+        ]
+    },
+    {
+        id: 35,
+        type: "OOP",
+        difficulty: "Medium",
+        title: "#oop4. Tìm hai điểm có khoảng cách lớn nhất",
+        description: "Xây dựng lớp MyPoint để biểu diễn điểm trong mặt phẳng tọa độ với các thuộc tính x và y. Viết chương trình nhập vào n điểm, tìm hai điểm có khoảng cách lớn nhất và hiển thị tọa độ của chúng cùng với giá trị khoảng cách.",
+        exe_input: "Đầu tiên là một số nguyên n (2 ≤ n ≤ 100), tiếp theo là n dòng, mỗi dòng chứa hai số thực x và y biểu diễn tọa độ của một điểm.",
+        exe_output: "In ra tọa độ của hai điểm có khoảng cách lớn nhất và giá trị khoảng cách giữa chúng theo định dạng: 'Point 1: (<x1>, <y1>), Point 2: (<x2>, <y2>), Distance: <khoảng cách>'.",
+        testCases: [
+            {
+                input: "3\n0 0\n3 4\n6 8",
+                expected: "Point 1: (0.0, 0.0), Point 2: (6.0, 8.0), Distance: 10.0"
+            },
+            {
+                input: "4\n1 1\n2 2\n3 3\n4 4",
+                expected: "Point 1: (1.0, 1.0), Point 2: (4.0, 4.0), Distance: 4.242640687119285"
+            },
+            {
+                input: "5\n-1 -1\n-2 -2\n-3 -3\n-4 -4\n0 0",
+                expected: "Point 1: (-4.0, -4.0), Point 2: (0.0, 0.0), Distance: 5.656854249492381"
+            },
+            {
+                input: "6\n0 0\n1 1\n2 2\n3 3\n4 4\n5 5",
+                expected: "Point 1: (0.0, 0.0), Point 2: (5.0, 5.0), Distance: 7.0710678118654755"
+            },
+            {
+                input: "3\n-1 -1\n1 1\n-1 1",
+                expected: "Point 1: (-1.0, -1.0), Point 2: (1.0, 1.0), Distance: 2.8284271247461903"
+            },
+            {
+                input: "4\n0 0\n0 3\n4 0\n4 3",
+                expected: "Point 1: (0.0, 0.0), Point 2: (4.0, 3.0), Distance: 5.0"
+            }
+        ]
+    },
+    {
+        id: 36,
+        type: "OOP",
+        difficulty: "Medium",
+        title: "#oop5. Kiểm tra loại tam giác từ 3 điểm",
+        description: "Sử dụng lớp MyPoint để biểu diễn điểm trong mặt phẳng tọa độ với các thuộc tính x và y. Viết chương trình nhập vào 3 điểm, kiểm tra xem chúng có tạo thành một tam giác hay không, và nếu có, xác định loại tam giác (thường, vuông, cân, vuông cân, đều).",
+        exe_input: "Ba dòng, mỗi dòng chứa hai số thực x và y biểu diễn tọa độ của một điểm.",
+        exe_output: "Nếu 3 điểm không tạo thành tam giác, in ra 'Not a triangle'. Nếu tạo thành tam giác, in ra loại tam giác theo định dạng: 'Triangle <loại>'.",
+        testCases: [
+            {
+                input: "0 0\n1 1\n2 2",
+                expected: "Not a triangle"
+            },
+            {
+                input: "0 0\n3 0\n0 4",
+                expected: "Triangle right isosceles"
+            },
+            {
+                input: "0 0\n1 0\n0 1",
+                expected: "Triangle right"
+            },
+            {
+                input: "0 0\n2 0\n1 1.7320508075688772",
+                expected: "Triangle equilateral"
+            },
+            {
+                input: "0 0\n2 0\n1 2",
+                expected: "Triangle isosceles"
+            },
+            {
+                input: "0 0\n3 0\n1 2",
+                expected: "Triangle scalene"
+            }
+        ]
     }
-                    
 ];
 
 export default exercises;
