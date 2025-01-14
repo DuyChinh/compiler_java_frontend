@@ -708,7 +708,114 @@ const exercises = [
                 expected: "Triangle scalene"
             }
         ]
+    },
+    {
+        id: 37,
+        type: "OOP",
+        difficulty: "Medium",
+        title: "#oop6. Thực hiện các phép toán trên phân số",
+        description: "Sử dụng lớp PhanSo để biểu diễn phân số với các thuộc tính tử số và mẫu số. Viết chương trình nhập vào hai phân số, tính tổng, hiệu, tích và thương của chúng, sau đó in kết quả dưới dạng bốn phân số rút gọn, cách nhau bởi dấu cách.",
+        exe_input: "Hai dòng, mỗi dòng chứa hai số nguyên a và b (b khác 0) biểu diễn tử số và mẫu số của một phân số.",
+        exe_output: "In ra bốn phân số rút gọn, mỗi phân số ở dạng 'a/b', cách nhau bởi dấu cách, lần lượt là tổng, hiệu, tích và thương của hai phân số.",
+        testCases: [
+            {
+                input: "1 2\n1 3",
+                expected: "5/6 1/6 1/6 3/2"
+            },
+            {
+                input: "2 5\n3 7",
+                expected: "29/35 -1/35 6/35 14/15"
+            },
+            {
+                input: "-1 4\n1 2",
+                expected: "1/4 -3/4 -1/8 -1/2"
+            },
+            {
+                input: "3 8\n2 3",
+                expected: "25/24 -7/24 1/4 9/16"
+            },
+            {
+                input: "5 9\n-4 7",
+                expected: "1/63 83/63 -20/63 -35/36"
+            },
+            {
+                input: "-2 5\n-3 4",
+                expected: "-23/20 7/20 3/10 8/15"
+            }
+        ]
+    },
+    {
+        id: 38,
+        type: "OOP",
+        difficulty: "Medium",
+        title: "#oop7. Thực hiện các phép toán trên số phức",
+        description: "Sử dụng lớp SoPhuc để biểu diễn số phức với các thuộc tính phần thực và phần ảo. Viết chương trình nhập vào hai số phức, tính tổng, hiệu, tích và thương của chúng, sau đó in kết quả dưới dạng bốn số phức, mỗi số phức trên một dòng.",
+        exe_input: "Hai dòng, mỗi dòng chứa hai số thực a và b biểu diễn phần thực và phần ảo của một số phức.",
+        exe_output: "In ra bốn số phức, mỗi số phức trên một dòng, lần lượt là tổng, hiệu, tích và thương của hai số phức, theo định dạng 'a + bi' hoặc 'a - bi' tùy thuộc vào dấu của phần ảo.",
+        testCases: [
+            {
+                input: "1 2\n3 4",
+                expected: "4.0 + 6.0i\n-2.0 - 2.0i\n-5.0 + 10.0i\n0.44 + 0.08i"
+            },
+            {
+                input: "2 -3\n-1 4",
+                expected: "1.0 + 1.0i\n3.0 - 7.0i\n10.0 + 11.0i\n-0.7 - 0.1i"
+            },
+            {
+                input: "0 1\n1 0",
+                expected: "1.0 + 1.0i\n-1.0 + 1.0i\n0.0 + 1.0i\n0.0 + 1.0i"
+            },
+            {
+                input: "-2 3\n2 -3",
+                expected: "0.0 + 0.0i\n-4.0 + 6.0i\n5.0 + 12.0i\n-1.0 + 0.0i"
+            },
+            {
+                input: "4 0\n0 4",
+                expected: "4.0 + 4.0i\n4.0 - 4.0i\n0.0 + 16.0i\n0.0 - 1.0i"
+            },
+            {
+                input: "1.5 -2.5\n-3.5 4.5",
+                expected: "-2.0 + 2.0i\n5.0 - 7.0i\n5.0 + 17.0i\n-0.5 - 0.5i"
+            }
+        ]
+    },
+    {
+        id: 39,
+        type: "OOP",
+        difficulty: "Medium",
+        title: "#oop8. Quản lý mặt hàng và sắp xếp theo giá bán",
+        description: "Xây dựng lớp MatHang với các thuộc tính: maHang (int), ten (String), nhom (String), giaBan (double). Mã hàng phải có đúng 4 chữ số, tên hàng không được để trống, nhóm hàng chỉ thuộc một trong các loại: 'hàng tiêu dùng', 'hàng thời trang', 'điện tử - điện lạnh', và giá bán phải lớn hơn 0. Viết chương trình nhập vào danh sách các mặt hàng, sau đó sắp xếp và in danh sách theo giá bán tăng dần.",
+        exe_input: "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 100) - số lượng mặt hàng. Tiếp theo là n dòng, mỗi dòng chứa thông tin về một mặt hàng theo định dạng: maHang ten nhom giaBan.",
+        exe_output: "In ra danh sách các mặt hàng sau khi sắp xếp theo giá bán tăng dần, mỗi mặt hàng trên một dòng theo định dạng: maHang ten nhom giaBan.",
+        testCases: [
+            {
+                input: "3\n1001 Tủ lạnh điện tử - điện lạnh 5000000\n1002 Áo sơ mi hàng thời trang 300000\n1003 Bánh kẹo hàng tiêu dùng 50000",
+                expected: "1003 Bánh kẹo hàng tiêu dùng 50000.0\n1002 Áo sơ mi hàng thời trang 300000.0\n1001 Tủ lạnh điện tử - điện lạnh 5000000.0"
+            },
+            {
+                input: "2\n1004 Máy giặt điện tử - điện lạnh 7000000\n1005 Quần jeans hàng thời trang 400000",
+                expected: "1005 Quần jeans hàng thời trang 400000.0\n1004 Máy giặt điện tử - điện lạnh 7000000.0"
+            },
+            {
+                input: "4\n1006 Tivi điện tử - điện lạnh 8000000\n1007 Váy đầm hàng thời trang 600000\n1008 Nồi cơm điện điện tử - điện lạnh 1500000\n1009 Sữa tươi hàng tiêu dùng 20000",
+                expected: "1009 Sữa tươi hàng tiêu dùng 20000.0\n1008 Nồi cơm điện điện tử - điện lạnh 1500000.0\n1007 Váy đầm hàng thời trang 600000.0\n1006 Tivi điện tử - điện lạnh 8000000.0"
+            },
+            {
+                input: "1\n1010 Bánh mì hàng tiêu dùng 10000",
+                expected: "1010 Bánh mì hàng tiêu dùng 10000.0"
+            },
+            {
+                input: "5\n1011 Laptop điện tử - điện lạnh 15000000\n1012 Giày thể thao hàng thời trang 800000\n1013 Nước ngọt hàng tiêu dùng 10000\n1014 Điều hòa điện tử - điện lạnh 12000000\n1015 Mũ lưỡi trai hàng thời trang 200000",
+                expected: "1013 Nước ngọt hàng tiêu dùng 10000.0\n1015 Mũ lưỡi trai hàng thời trang 200000.0\n1012 Giày thể thao hàng thời trang 800000.0\n1014 Điều hòa điện tử - điện lạnh 12000000.0\n1011 Laptop điện tử - điện lạnh 15000000.0"
+            },
+            {
+                input: "3\n1016 Bàn ủi điện tử - điện lạnh 500000\n1017 Áo khoác hàng thời trang 700000\n1018 Kem đánh răng hàng tiêu dùng 30000",
+                expected: "1018 Kem đánh răng hàng tiêu dùng 30000.0\n1016 Bàn ủi điện tử - điện lạnh 500000.0\n1017 Áo khoác hàng thời trang 700000.0"
+            }
+        ]
     }
+    
+        
 ];
 
 export default exercises;
