@@ -523,17 +523,88 @@ const exercises = [
         type: "Function",
         difficulty: "Medium",
         title: "#fun03. Kiểm tra mảng có phải dãy số liên tiếp",
-        "description": "Cho một mảng số nguyên dương. Hãy kiểm tra xem các số trong mảng có tạo thành một dãy số liên tiếp hay không (các số không cần sắp xếp).",
-        "exe_input": "Đầu tiên là một số nguyên n (1 ≤ n ≤ 10^5), tiếp theo là n số nguyên cách nhau một khoảng trống.",
-        "exe_output": "In ra 'YES' nếu các số trong mảng tạo thành một dãy liên tiếp, ngược lại in ra 'NO'.",
-        "testCases": [
+        description: "Cho một mảng số nguyên dương. Hãy kiểm tra xem các số trong mảng có tạo thành một dãy số liên tiếp hay không (các số không cần sắp xếp).",
+        exe_input: "Đầu tiên là một số nguyên n (1 ≤ n ≤ 10^5), tiếp theo là n số nguyên cách nhau một khoảng trống.",
+        exe_output: "In ra 'YES' nếu các số trong mảng tạo thành một dãy liên tiếp, ngược lại in ra 'NO'.",
+        testCases: [
             { input: "5 1 2 3 4 5", expected: "YES" },
             { input: "4 10 11 12 13", expected: "YES" },
             { input: "6 3 5 6 7 8 10", expected: "NO" },
             { input: "3 1 3 2", expected: "YES" },
             { input: "4 7 8 9 11", expected: "NO" }
         ]
-    }              
+    },
+    {
+        id: 32,
+        type: "OOP",
+        difficulty: "Easy",
+        title: "#oop1. Quản lý thông tin sinh viên",
+        description: "Xây dựng một lớp SinhVien trong đó lưu trữ thông tin về sinh viên như tên, tuổi, mã số sinh viên (MSSV), điểm trung bình. Viết chương trình nhận vào một vài thông tin sinh viên từ đầu vào, tạo đối tượng sinh viên và in ra thông tin của từng sinh viên.",
+        exe_input: "Đầu tiên là số nguyên n (1 ≤ n ≤ 100), tiếp theo là n dòng, mỗi dòng chứa tên, tuổi, MSSV và điểm trung bình của một sinh viên (các giá trị cách nhau bởi một dấu cách).",
+        exe_output: "In ra thông tin của mỗi sinh viên theo định dạng: 'name: <tên>, age: <tuổi>, gpa: <điểm>'.",
+        testCases: [
+            { 
+                input: "2\nAlice 20 12345 8.5\nBob 21 67890 9.0", 
+                expected: "name: Alice, age: 20, gpa: 8.5\nname: Bob, age: 21, gpa: 9.0" 
+            },
+            { 
+                input: "3\nCharlie 19 11111 7.8\nDaisy 22 22222 8.3\nEve 20 33333 8.9", 
+                expected: "name: Charlie, age: 19, gpa: 7.8\nname: Daisy, age: 22, gpa: 8.3\nname: Eve, age: 20, gpa: 8.9"
+            },
+            { 
+                input: "1\nFrank 23 44444 6.9", 
+                expected: "name: Frank, age: 23, gpa: 6.9"
+            },
+            { 
+                input: "4\nAnna 18 55555 9.2\nBrian 20 66666 7.4\nClara 21 77777 8.0\nDavid 22 88888 6.5", 
+                expected: "name: Anna, age: 18, gpa: 9.2\nname: Brian, age: 20, gpa: 7.4\nname: Clara, age: 21, gpa: 8.0\nname: David, age: 22, gpa: 6.5"
+            },
+            { 
+                input: "3\nEmma 19 99999 7.6\nOlivia 20 10001 8.8\nSophia 21 10002 9.1", 
+                expected: "name: Emma, age: 19, gpa: 7.6\nname: Olivia, age: 20, gpa: 8.8\nname: Sophia, age: 21, gpa: 9.1"
+            },
+            { 
+                input: "2\nEthan 22 10003 6.8\nNoah 23 10004 7.9", 
+                expected: "name: Ethan, age: 22, gpa: 6.8\nname: Noah, age: 23, gpa: 7.9"
+            }
+        ]
+    },
+    {
+        id: 33,
+        type: "OOP",
+        difficulty: "Easy",
+        title: "#oop2. Sắp xếp và in thông tin sinh viên",
+        description: "Xây dựng một lớp SinhVien trong đó lưu trữ thông tin về sinh viên như tên, tuổi, mã số sinh viên (MSSV), điểm trung bình. Viết chương trình nhận vào một vài thông tin sinh viên từ đầu vào, tạo đối tượng sinh viên, sắp xếp danh sách theo tên và in ra thông tin cơ bản của từng sinh viên theo định dạng '<tên> <tuổi> <điểm>'.",
+        exe_input: "Đầu tiên là số nguyên n (1 ≤ n ≤ 100), tiếp theo là n dòng, mỗi dòng chứa tên, tuổi, MSSV và điểm trung bình của một sinh viên (các giá trị cách nhau bởi một dấu cách).",
+        exe_output: "In ra thông tin của từng sinh viên theo định dạng '<tên> <tuổi> <điểm>', danh sách đã được sắp xếp theo tên.",
+        testCases: [
+            { 
+                input: "2\nBob 20 12345 8.5\nAlice 21 67890 9.0", 
+                expected: "Alice 21 9.0\nBob 20 8.5" 
+            },
+            { 
+                input: "3\nEve 19 11111 7.8\nDaisy 22 22222 8.3\nCharlie 20 33333 8.9", 
+                expected: "Charlie 20 8.9\nDaisy 22 8.3\nEve 19 7.8"
+            },
+            { 
+                input: "1\nFrank 23 44444 6.9", 
+                expected: "Frank 23 6.9"
+            },
+            { 
+                input: "4\nClara 18 55555 9.2\nBrian 20 66666 7.4\nAnna 21 77777 8.0\nDavid 22 88888 6.5", 
+                expected: "Anna 21 8.0\nBrian 20 7.4\nClara 18 9.2\nDavid 22 6.5"
+            },
+            { 
+                input: "3\nSophia 19 99999 7.6\nOlivia 20 10001 8.8\nEmma 21 10002 9.1", 
+                expected: "Emma 21 9.1\nOlivia 20 8.8\nSophia 19 7.6"
+            },
+            { 
+                input: "2\nEthan 22 10003 6.8\nNoah 23 10004 7.9", 
+                expected: "Ethan 22 6.8\nNoah 23 7.9"
+            }
+        ]
+    }
+                    
 ];
 
 export default exercises;

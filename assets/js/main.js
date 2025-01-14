@@ -161,14 +161,29 @@ const createTable = (selectedExercise) => {
     `;
 
     const testCases = selectedExercise.testCases.slice(0, 2);
+    // testCases.forEach(testCase => {
+    //     const row = document.createElement("tr");
+    //     row.innerHTML = `
+    //         <td>${testCase.input}</td>
+    //         <td>${testCase.expected}</td>
+    //     `;
+    //     tbody.appendChild(row);
+    // });
+
     testCases.forEach(testCase => {
         const row = document.createElement("tr");
+    
+        // Xử lý chuỗi input và expected để thay thế '\n' bằng thẻ HTML <br>
+        const formattedInput = testCase.input.replace(/\n/g, "<br>");
+        const formattedExpected = testCase.expected.replace(/\n/g, "<br>");
+    
         row.innerHTML = `
-            <td>${testCase.input}</td>
-            <td>${testCase.expected}</td>
+            <td>${formattedInput}</td>
+            <td>${formattedExpected}</td>
         `;
         tbody.appendChild(row);
     });
+    
 
     // Kết hợp các phần của bảng
     table.appendChild(thead);
