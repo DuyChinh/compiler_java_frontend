@@ -785,19 +785,19 @@ const exercises = [
         difficulty: "Medium",
         title: "#oop8. Quản lý mặt hàng và sắp xếp theo giá bán",
         description: "Xây dựng lớp MatHang với các thuộc tính: maHang (int), ten (String), nhom (String), giaBan (double). Mã hàng phải có đúng 4 chữ số, tên hàng không được để trống, nhóm hàng chỉ thuộc một trong các loại: 'hàng tiêu dùng', 'hàng thời trang', 'điện tử - điện lạnh', và giá bán phải lớn hơn 0. Viết chương trình nhập vào danh sách các mặt hàng, sau đó sắp xếp và in danh sách theo giá bán tăng dần.",
-        exe_input: "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 100) - số lượng mặt hàng. Tiếp theo là n dòng, mỗi dòng chứa thông tin về một mặt hàng theo định dạng: maHang ten nhom giaBan.",
+        exe_input: "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 100) - số lượng mặt hàng. Tiếp theo là n dòng, mỗi dòng chứa thông tin về một mặt hàng theo định dạng: maHang,ten,nhom,giaBan.",
         exe_output: "In ra danh sách các mặt hàng sau khi sắp xếp theo giá bán tăng dần, mỗi mặt hàng trên một dòng theo định dạng: maHang ten nhom giaBan.",
         testCases: [
             {
-                input: "3\n1001 Tủ lạnh điện tử - điện lạnh 5000000\n1002 Áo sơ mi hàng thời trang 300000\n1003 Bánh kẹo hàng tiêu dùng 50000",
+                input: "3\n1001,Tủ lạnh,điện tử - điện lạnh, 5000000\n1002,Áo sơ mi,hàng thời trang,300000\n1003,Bánh kẹo,hàngtiêu dùng,50000",
                 expected: "1003 Bánh kẹo hàng tiêu dùng 50000.0\n1002 Áo sơ mi hàng thời trang 300000.0\n1001 Tủ lạnh điện tử - điện lạnh 5000000.0"
             },
             {
-                input: "2\n1004 Máy giặt điện tử - điện lạnh 7000000\n1005 Quần jeans hàng thời trang 400000",
+                input: "2\n1004,Máy giặt,điện tử - điện lạnh,7000000\n1005,Quần jeans,hàng thời trang,400000",
                 expected: "1005 Quần jeans hàng thời trang 400000.0\n1004 Máy giặt điện tử - điện lạnh 7000000.0"
             },
             {
-                input: "4\n1006 Tivi điện tử - điện lạnh 8000000\n1007 Váy đầm hàng thời trang 600000\n1008 Nồi cơm điện điện tử - điện lạnh 1500000\n1009 Sữa tươi hàng tiêu dùng 20000",
+                input: "4\n1006,Tivi,điện tử - điện lạnh,8000000\n1007,Váy đầm,hàng thời trang,600000\n1008,Nồi cơm điện,điện tử - điện lạnh,1500000\n1009,Sữa tươi,hàng tiêu dùng,20000",
                 expected: "1009 Sữa tươi hàng tiêu dùng 20000.0\n1008 Nồi cơm điện điện tử - điện lạnh 1500000.0\n1007 Váy đầm hàng thời trang 600000.0\n1006 Tivi điện tử - điện lạnh 8000000.0"
             },
             {
@@ -805,11 +805,11 @@ const exercises = [
                 expected: "1010 Bánh mì hàng tiêu dùng 10000.0"
             },
             {
-                input: "5\n1011 Laptop điện tử - điện lạnh 15000000\n1012 Giày thể thao hàng thời trang 800000\n1013 Nước ngọt hàng tiêu dùng 10000\n1014 Điều hòa điện tử - điện lạnh 12000000\n1015 Mũ lưỡi trai hàng thời trang 200000",
+                input: "5\n1011,Laptop,điện tử - điện lạnh,15000000\n1012,Giày thể thao,hàng thời trang,800000\n1013,Nước ngọt,hàng tiêu dùng,10000\n1014,Điều hòa,điện tử - điện lạnh,12000000\n1015,Mũ lưỡi trai,hàng thời trang,200000",
                 expected: "1013 Nước ngọt hàng tiêu dùng 10000.0\n1015 Mũ lưỡi trai hàng thời trang 200000.0\n1012 Giày thể thao hàng thời trang 800000.0\n1014 Điều hòa điện tử - điện lạnh 12000000.0\n1011 Laptop điện tử - điện lạnh 15000000.0"
             },
             {
-                input: "3\n1016 Bàn ủi điện tử - điện lạnh 500000\n1017 Áo khoác hàng thời trang 700000\n1018 Kem đánh răng hàng tiêu dùng 30000",
+                input: "3\n1016,Bàn ủi,điện tử - điện lạnh,500000\n1017,Áo khoác,hàng thời trang,700000\n1018,Kem đánh răng,hàng tiêu dùng,30000",
                 expected: "1018 Kem đánh răng hàng tiêu dùng 30000.0\n1016 Bàn ủi điện tử - điện lạnh 500000.0\n1017 Áo khoác hàng thời trang 700000.0"
             }
         ]
