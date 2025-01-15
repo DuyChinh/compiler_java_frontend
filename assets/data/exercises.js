@@ -790,7 +790,7 @@ const exercises = [
         testCases: [
             {
                 input: "3\n1001,Tủ lạnh,điện tử - điện lạnh,5000000\n1002,Áo sơ mi,hàng thời trang,300000\n1003,Bánh kẹo,hàngtiêu dùng,50000",
-                expected: "1003 Bánh kẹo hàng tiêu dùng 50000.0\n1002 Áo sơ mi hàng thời trang 300000.0\n1001 Tủ lạnh điện tử - điện lạnh 5000000.0"
+                expected: "1003 Bánh kẹo hàngtiêu dùng 50000.0\n1002 Áo sơ mi hàng thời trang 300000.0\n1001 Tủ lạnh điện tử - điện lạnh 5000000.0"
             },
             {
                 input: "2\n1004,Máy giặt,điện tử - điện lạnh,7000000\n1005,Quần jeans,hàng thời trang,400000",
@@ -798,7 +798,7 @@ const exercises = [
             },
             {
                 input: "4\n1006,Tivi,điện tử - điện lạnh,8000000\n1007,Váy đầm,hàng thời trang,600000\n1008,Nồi cơm điện,điện tử - điện lạnh,1500000\n1009,Sữa tươi,hàng tiêu dùng,20000",
-                expected: "1009 Sữa tươi hàng tiêu dùng 20000.0\n1008 Nồi cơm điện điện tử - điện lạnh 1500000.0\n1007 Váy đầm hàng thời trang 600000.0\n1006 Tivi điện tử - điện lạnh 8000000.0"
+                expected: "1009 Sữa tươi hàng tiêu dùng 20000.0\n1007 Váy đầm hàng thời trang 600000.0\n1008 Nồi cơm điện điện tử - điện lạnh 1500000.0\n1006 Tivi điện tử - điện lạnh 8000000.0"
             },
             {
                 input: "1\n1010,Bánh mì,hàng tiêu dùng,10000",
