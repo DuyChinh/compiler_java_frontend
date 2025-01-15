@@ -813,9 +813,401 @@ const exercises = [
                 expected: "1018 Kem đánh răng hàng tiêu dùng 30000.0\n1016 Bàn ủi điện tử - điện lạnh 500000.0\n1017 Áo khoác hàng thời trang 700000.0"
             }
         ]
+    },
+    {
+        "id": 40,
+        "type": "OOP",
+        "difficulty": "Easy",
+        "title": "#inherit01. Quản lý hình học",
+        "description": "Xây dựng lớp Shape và các lớp con Circle, Rectangle để tính diện tích. Lớp Circle có thuộc tính radius, lớp Rectangle có thuộc tính width và height.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 20). Tiếp theo là n dòng, mỗi dòng chứa loại hình và các tham số: Circle radius hoặc Rectangle width height.",
+        "exe_output": "In ra danh sách hình cùng diện tích.",
+        "testCases": [
+            {
+                "input": "2\nCircle 5\nRectangle 4 6",
+                "expected": "Circle 78.54\nRectangle 24.00"
+            },
+            {
+                "input": "3\nRectangle 3 7\nCircle 2\nCircle 10",
+                "expected": "Rectangle 21.00\nCircle 12.57\nCircle 314.16"
+            },
+            {
+                "input": "4\nCircle 3\nRectangle 2 5\nCircle 6\nRectangle 3 3",
+                "expected": "Circle 28.27\nRectangle 10.00\nCircle 113.10\nRectangle 9.00"
+            },
+            {
+                "input": "5\nCircle 1\nCircle 2\nRectangle 2 2\nRectangle 4 5\nCircle 10",
+                "expected": "Circle 3.14\nCircle 12.57\nRectangle 4.00\nRectangle 20.00\nCircle 314.16"
+            },
+            {
+                "input": "3\nRectangle 5 8\nRectangle 7 2\nCircle 4",
+                "expected": "Rectangle 40.00\nRectangle 14.00\nCircle 50.27"
+            },
+            {
+                "input": "2\nCircle 7\nRectangle 6 9",
+                "expected": "Circle 153.94\nRectangle 54.00"
+            },
+            {
+                "input": "4\nRectangle 10 10\nCircle 8\nRectangle 2 6\nCircle 3",
+                "expected": "Rectangle 100.00\nCircle 201.06\nRectangle 12.00\nCircle 28.27"
+            }
+        ]
+    },    
+    {
+        "id": 41,
+        "type": "OOP",
+        "difficulty": "Easy",
+        "title": "#inherit02. Quản lý nhân viên",
+        "description": "Xây dựng lớp Employee và các lớp con Manager, Worker. Lớp Manager có thuộc tính bonus, Worker có overtimeHours và hourlyRate.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 30). Tiếp theo là n dòng, mỗi dòng chứa thông tin nhân viên.",
+        "exe_output": "In tổng lương của tất cả nhân viên.",
+        "testCases": [
+            {
+                "input": "3\nManager John 60000 15000\nWorker Jane 35000 10 250\nWorker Emily 40000 15 300",
+                "expected": "Total salary: 106500.00"
+            },
+            {
+                "input": "4\nManager Mike 80000 20000\nManager Sarah 75000 18000\nWorker Tom 50000 25 150\nWorker Lucy 45000 30 100",
+                "expected": "Total salary: 142500.00"
+            },
+            {
+                "input": "2\nManager Anna 55000 12000\nWorker Peter 32000 40 50",
+                "expected": "Total salary: 69000.00"
+            },
+            {
+                "input": "5\nManager Harry 90000 30000\nWorker Sam 25000 35 80\nWorker Kate 40000 20 150\nManager Robert 85000 25000\nWorker Lily 50000 10 200",
+                "expected": "Total salary: 192500.00"
+            },
+            {
+                "input": "3\nManager Victoria 70000 20000\nWorker Chris 48000 15 120\nWorker Sophie 45000 25 80",
+                "expected": "Total salary: 113300.00"
+            }
+        ] 
+    },
+    {
+        "id": 42,
+        "type": "OOP",
+        "difficulty": "Medium",
+        "title": "#inherit03. Quản lý xe",
+        "description": "Xây dựng lớp Vehicle và các lớp con Car, Truck. Lớp Car có thuộc tính numberOfSeats, Truck có capacity.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 50). Tiếp theo là n dòng, mỗi dòng chứa thông tin xe.",
+        "exe_output": "Phân loại và in danh sách xe theo từng loại.",
+        "testCases": [
+            {
+                "input": "3\nCar 001 Toyota 5\nTruck 002 Ford 10.5\nCar 003 Honda 4",
+                "expected": "Cars:\n001 Toyota 5\n003 Honda 4\n\nTrucks:\n002 Ford 10.5"
+            },
+            {
+                "input": "4\nCar 004 BMW 4\nTruck 005 Volvo 15\nCar 006 Audi 5\nTruck 007 Scania 12.5",
+                "expected": "Cars:\n004 BMW 4\n006 Audi 5\n\nTrucks:\n005 Volvo 15\n007 Scania 12.5"
+            },
+            {
+                "input": "2\nTruck 008 MAN 20\nCar 009 Tesla 4",
+                "expected": "Cars:\n009 Tesla 4\n\nTrucks:\n008 MAN 20"
+            },
+            {
+                "input": "5\nCar 010 Ford 5\nTruck 011 Mercedes 18\nCar 012 Hyundai 4\nTruck 013 Iveco 22.5\nCar 014 Kia 5",
+                "expected": "Cars:\n010 Ford 5\n012 Hyundai 4\n014 Kia 5\n\nTrucks:\n011 Mercedes 18\n013 Iveco 22.5"
+            },
+            {
+                "input": "3\nTruck 015 Renault 14\nTruck 016 Freightliner 25\nCar 017 Volkswagen 5",
+                "expected": "Cars:\n017 Volkswagen 5\n\nTrucks:\n015 Renault 14\n016 Freightliner 25"
+            },
+            {
+                "input": "6\nCar 018 Subaru 4\nTruck 019 Kenworth 30\nCar 020 Lexus 5\nTruck 021 DAF 18\nCar 022 Mazda 4\nTruck 023 Mack 24",
+                "expected": "Cars:\n018 Subaru 4\n020 Lexus 5\n022 Mazda 4\n\nTrucks:\n019 Kenworth 30\n021 DAF 18\n023 Mack 24"
+            },
+            {
+                "input": "1\nCar 024 Nissan 4",
+                "expected": "Cars:\n024 Nissan 4\n\nTrucks:"
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "type": "OOP",
+        "difficulty": "Medium",
+        "title": "#inherit04. Quản lý sách và tạp chí",
+        "description": "Xây dựng lớp Publication và các lớp con Book, Magazine. Lớp Book có author, Magazine có issue.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 50). Tiếp theo là n dòng, mỗi dòng chứa thông tin ấn phẩm.",
+        "exe_output": "Sắp xếp và in danh sách theo giá tăng dần.",
+        "testCases": [
+            {
+                "input": "3\nBook HarryPotter 20.5 J.K.Rowling\nMagazine Vogue 15.0 7\nBook LOTR 25.0 Tolkien",
+                "expected": "Vogue 15.0 7\nHarryPotter 20.5 J.K.Rowling\nLOTR 25.0 Tolkien"
+            },
+            {
+                "input": "4\nBook Dune 18.0 Herbert\nMagazine Time 10.0 15\nBook Foundation 22.0 Asimov\nMagazine Forbes 12.0 30",
+                "expected": "Time 10.0 15\nForbes 12.0 30\nDune 18.0 Herbert\nFoundation 22.0 Asimov"
+            },
+            {
+                "input": "2\nMagazine NationalGeographic 19.0 5\nBook 1984 15.0 Orwell",
+                "expected": "1984 15.0 Orwell\nNationalGeographic 19.0 5"
+            },
+            {
+                "input": "5\nBook ToKillAMockingbird 25.0 HarperLee\nMagazine People 20.0 10\nBook BraveNewWorld 30.0 Huxley\nMagazine ScientificAmerican 22.0 12\nBook TheGreatGatsby 18.0 Fitzgerald",
+                "expected": "TheGreatGatsby 18.0 Fitzgerald\nPeople 20.0 10\nScientificAmerican 22.0 12\nToKillAMockingbird 25.0 HarperLee\nBraveNewWorld 30.0 Huxley"
+            },
+            {
+                "input": "3\nMagazine SportsIllustrated 16.0 8\nBook CrimeAndPunishment 24.0 Dostoevsky\nMagazine Newsweek 14.0 3",
+                "expected": "Newsweek 14.0 3\nSportsIllustrated 16.0 8\nCrimeAndPunishment 24.0 Dostoevsky"
+            },
+            {
+                "input": "6\nBook WarAndPeace 40.0 Tolstoy\nMagazine Economist 30.0 50\nBook PrideAndPrejudice 28.0 Austen\nMagazine Fortune 25.0 40\nBook Catch22 35.0 Heller\nMagazine NewYorker 20.0 60",
+                "expected": "NewYorker 20.0 60\nFortune 25.0 40\nPrideAndPrejudice 28.0 Austen\nEconomist 30.0 50\nCatch22 35.0 Heller\nWarAndPeace 40.0 Tolstoy"
+            }
+        ]  
+    },
+    {
+        "id": 44,
+        "type": "OOP",
+        "difficulty": "Advanced",
+        "title": "#inherit05. Quản lý đội xe vận tải",
+        "description": "Xây dựng hệ thống quản lý các loại phương tiện trong đội xe vận tải gồm các lớp Vehicle, Car, Truck và Motorcycle. Lớp Car có thuộc tính numberOfSeats, Truck có capacity, và Motorcycle có engineDisplacement.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 100). Tiếp theo là n dòng, mỗi dòng chứa thông tin phương tiện.",
+        "exe_output": "Phân loại, sắp xếp phương tiện theo loại và in danh sách theo giá giảm dần trong từng loại.",
+        "testCases": [
+            {
+                "input": "5\nCar 001 Toyota 20000 5\nTruck 002 Volvo 50000 20\nMotorcycle 003 Yamaha 10000 150\nCar 004 Honda 25000 4\nTruck 005 Scania 60000 25",
+                "expected": "Cars:\n004 Honda 25000 4\n001 Toyota 20000 5\n\nTrucks:\n005 Scania 60000 25\n002 Volvo 50000 20\n\nMotorcycles:\n003 Yamaha 10000 150"
+            },
+            {
+                "input": "6\nTruck 006 Freightliner 45000 30\nMotorcycle 007 Ducati 15000 1200\nCar 008 BMW 30000 4\nMotorcycle 009 Harley 20000 1600\nCar 010 Audi 28000 4\nTruck 011 Kenworth 55000 35",
+                "expected": "Cars:\n008 BMW 30000 4\n010 Audi 28000 4\n\nTrucks:\n011 Kenworth 55000 35\n006 Freightliner 45000 30\n\nMotorcycles:\n009 Harley 20000 1600\n007 Ducati 15000 1200"
+            },
+            {
+                "input": "4\nMotorcycle 012 Kawasaki 12000 650\nCar 013 Tesla 45000 5\nTruck 014 MAN 70000 40\nCar 015 Ford 22000 4",
+                "expected": "Cars:\n013 Tesla 45000 5\n015 Ford 22000 4\n\nTrucks:\n014 MAN 70000 40\n\nMotorcycles:\n012 Kawasaki 12000 650"
+            },
+            {
+                "input": "7\nCar 016 Mercedes 35000 4\nTruck 017 Iveco 60000 35\nMotorcycle 018 Suzuki 9000 200\nMotorcycle 019 Honda 12000 300\nTruck 020 Volvo 50000 25\nCar 021 Lexus 40000 5\nMotorcycle 022 Yamaha 15000 500",
+                "expected": "Cars:\n021 Lexus 40000 5\n016 Mercedes 35000 4\n\nTrucks:\n017 Iveco 60000 35\n020 Volvo 50000 25\n\nMotorcycles:\n022 Yamaha 15000 500\n019 Honda 12000 300\n018 Suzuki 9000 200"
+            },
+            {
+                "input": "5\nTruck 023 DAF 55000 30\nCar 024 Subaru 27000 5\nMotorcycle 025 Triumph 18000 650\nTruck 026 Freightliner 70000 40\nCar 027 Toyota 25000 4",
+                "expected": "Cars:\n024 Subaru 27000 5\n027 Toyota 25000 4\n\nTrucks:\n026 Freightliner 70000 40\n023 DAF 55000 30\n\nMotorcycles:\n025 Triumph 18000 650"
+            },
+            {
+                "input": "8\nMotorcycle 028 BMW 20000 800\nTruck 029 Mercedes 80000 50\nCar 030 Volkswagen 32000 4\nTruck 031 Volvo 75000 45\nCar 032 Kia 18000 4\nMotorcycle 033 Ducati 25000 1200\nTruck 034 Scania 90000 55\nCar 035 Hyundai 22000 5",
+                "expected": "Cars:\n030 Volkswagen 32000 4\n035 Hyundai 22000 5\n032 Kia 18000 4\n\nTrucks:\n034 Scania 90000 55\n029 Mercedes 80000 50\n031 Volvo 75000 45\n\nMotorcycles:\n033 Ducati 25000 1200\n028 BMW 20000 800"
+            }
+        ]
+    },
+    {
+        "id": 45,
+        "type": "OOP",
+        "difficulty": "Easy",
+        "title": "#interface01. Quản lý các thiết bị điện",
+        "description": "Xây dựng hệ thống quản lý các thiết bị điện trong nhà gồm các interface Appliance và các lớp con Light, Fan, và AirConditioner. Interface Appliance có phương thức abstract turnOn() và turnOff().",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 50). Tiếp theo là n dòng, mỗi dòng chứa thông tin thiết bị (loại, tên, công suất).",
+        "exe_output": "In danh sách thiết bị theo công suất giảm dần. Khi bật tất cả các thiết bị, tính tổng công suất tiêu thụ.",
+        "testCases": [
+            {
+                "input": "3\nLight BedroomLight 60\nFan LivingRoomFan 75\nAirConditioner BedroomAC 1200",
+                "expected": "Devices:\nBedroomAC 1200\nLivingRoomFan 75\nBedroomLight 60\nTotal power consumption: 1335"
+            },
+            {
+                "input": "4\nLight KitchenLight 50\nFan DiningFan 90\nAirConditioner LivingRoomAC 1500\nAirConditioner MasterBedroomAC 2000",
+                "expected": "Devices:\nMasterBedroomAC 2000\nLivingRoomAC 1500\nDiningFan 90\nKitchenLight 50\nTotal power consumption: 3640"
+            },
+            {
+                "input": "5\nLight HallwayLight 40\nFan CeilingFan 80\nLight DeskLamp 25\nAirConditioner GuestRoomAC 1000\nAirConditioner OfficeAC 1800",
+                "expected": "Devices:\nOfficeAC 1800\nGuestRoomAC 1000\nCeilingFan 80\nHallwayLight 40\nDeskLamp 25\nTotal power consumption: 2945"
+            },
+            {
+                "input": "6\nFan OfficeFan 100\nAirConditioner KidsRoomAC 1200\nLight OutdoorLight 70\nFan GarageFan 150\nAirConditioner BasementAC 1700\nLight GardenLight 50",
+                "expected": "Devices:\nBasementAC 1700\nKidsRoomAC 1200\nGarageFan 150\nOfficeFan 100\nOutdoorLight 70\nGardenLight 50\nTotal power consumption: 3270"
+            },
+            {
+                "input": "3\nLight StudyLight 30\nAirConditioner MainHallAC 2000\nFan StudyFan 120",
+                "expected": "Devices:\nMainHallAC 2000\nStudyFan 120\nStudyLight 30\nTotal power consumption: 2150"
+            },
+            {
+                "input": "7\nLight BalconyLight 20\nFan KitchenFan 95\nAirConditioner SmallRoomAC 900\nLight ClosetLight 15\nFan BedroomFan 110\nAirConditioner LargeRoomAC 2200\nLight EntryLight 35",
+                "expected": "Devices:\nLargeRoomAC 2200\nSmallRoomAC 900\nBedroomFan 110\nKitchenFan 95\nEntryLight 35\nBalconyLight 20\nClosetLight 15\nTotal power consumption: 3365"
+            },
+            {
+                "input": "4\nAirConditioner OfficeRoomAC 1400\nLight OfficeLight 45\nFan ReceptionFan 125\nLight WaitingRoomLight 50",
+                "expected": "Devices:\nOfficeRoomAC 1400\nReceptionFan 125\nWaitingRoomLight 50\nOfficeLight 45\nTotal power consumption: 1620"
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "type": "OOP",
+        "difficulty": "Medium",
+        "title": "#interface02. Quản lý tài khoản ngân hàng",
+        "description": "Xây dựng hệ thống quản lý tài khoản ngân hàng với interface Account và các lớp con SavingsAccount, CheckingAccount, và FixedDepositAccount. Interface Account có các phương thức abstract deposit(), withdraw(), và calculateInterest().",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 50). Tiếp theo là n dòng, mỗi dòng chứa thông tin tài khoản (loại, số tài khoản, số dư, lãi suất).",
+        "exe_output": "In danh sách tài khoản theo số dư giảm dần và tính tổng lãi suất hàng năm của tất cả tài khoản.",
+        "testCases": [
+            {
+                "input": "3\nSavingsAccount 001 5000 3.5\nCheckingAccount 002 2000 0.5\nFixedDepositAccount 003 10000 5",
+                "expected": "Accounts:\n003 10000 5\n001 5000 3.5\n002 2000 0.5\nTotal annual interest: 475"
+            },
+            {
+                "input": "4\nSavingsAccount 004 8000 4\nFixedDepositAccount 005 15000 6\nCheckingAccount 006 3000 1\nSavingsAccount 007 7000 3",
+                "expected": "Accounts:\n005 15000 6\n004 8000 4\n007 7000 3\n006 3000 1\nTotal annual interest: 1250"
+            },
+            {
+                "input": "5\nFixedDepositAccount 008 20000 5\nSavingsAccount 009 10000 4\nCheckingAccount 010 5000 0.5\nSavingsAccount 011 15000 3.5\nFixedDepositAccount 012 30000 6",
+                "expected": "Accounts:\n012 30000 6\n008 20000 5\n011 15000 3.5\n009 10000 4\n010 5000 0.5\nTotal annual interest: 3550"
+            },
+            {
+                "input": "6\nSavingsAccount 013 4000 2\nCheckingAccount 014 1000 0.5\nFixedDepositAccount 015 12000 4\nSavingsAccount 016 6000 3\nFixedDepositAccount 017 25000 5.5\nCheckingAccount 018 2000 0.8",
+                "expected": "Accounts:\n017 25000 5.5\n015 12000 4\n016 6000 3\n013 4000 2\n018 2000 0.8\n014 1000 0.5\nTotal annual interest: 1920"
+            },
+            {
+                "input": "2\nFixedDepositAccount 019 50000 7\nSavingsAccount 020 20000 5",
+                "expected": "Accounts:\n019 50000 7\n020 20000 5\nTotal annual interest: 4400"
+            },
+            {
+                "input": "4\nCheckingAccount 021 4000 0.3\nSavingsAccount 022 10000 4.5\nFixedDepositAccount 023 25000 6\nSavingsAccount 024 15000 3",
+                "expected": "Accounts:\n023 25000 6\n024 15000 3\n022 10000 4.5\n021 4000 0.3\nTotal annual interest: 1820"
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "type": "OOP",
+        "difficulty": "Medium",
+        "title": "#interface03. Quản lý hệ thống thanh toán",
+        "description": "Xây dựng hệ thống quản lý thanh toán gồm interface PaymentMethod và các lớp con CreditCard, PayPal, và BankTransfer. Interface PaymentMethod có các phương thức abstract processPayment(), refund(), và getBalance().",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 50). Tiếp theo là n dòng, mỗi dòng chứa thông tin thanh toán (loại, tên tài khoản, số tiền, trạng thái giao dịch).",
+        "exe_output": "In danh sách giao dịch theo trạng thái và loại thanh toán, kèm thông tin chi tiết.",
+        "testCases": [
+            {
+                "input": "3\nCreditCard JohnDoe 1000 Completed\nPayPal Alice 500 Pending\nBankTransfer Bob 200 Completed",
+                "expected": "Transactions:\nCreditCard:\nJohnDoe 1000 Completed\nPayPal:\nAlice 500 Pending\nBankTransfer:\nBob 200 Completed"
+            },
+            {
+                "input": "4\nCreditCard Jane 1500 Pending\nPayPal Bob 300 Completed\nBankTransfer Alice 700 Pending\nCreditCard John 800 Completed",
+                "expected": "Transactions:\nCreditCard:\nJohn 800 Completed\nJane 1500 Pending\nPayPal:\nBob 300 Completed\nBankTransfer:\nAlice 700 Pending"
+            },
+            {
+                "input": "5\nPayPal John 400 Completed\nCreditCard Alice 1200 Completed\nBankTransfer Bob 500 Pending\nCreditCard Jane 700 Completed\nPayPal Alice 200 Pending",
+                "expected": "Transactions:\nCreditCard:\nAlice 1200 Completed\nJane 700 Completed\nPayPal:\nJohn 400 Completed\nAlice 200 Pending\nBankTransfer:\nBob 500 Pending"
+            },
+            {
+                "input": "6\nCreditCard Michael 2000 Completed\nPayPal Sarah 300 Pending\nBankTransfer Alice 1500 Completed\nPayPal David 100 Pending\nCreditCard Jessica 800 Pending\nBankTransfer Bob 1200 Completed",
+                "expected": "Transactions:\nCreditCard:\nMichael 2000 Completed\nJessica 800 Pending\nPayPal:\nSarah 300 Pending\nDavid 100 Pending\nBankTransfer:\nAlice 1500 Completed\nBob 1200 Completed"
+            },
+            {
+                "input": "2\nCreditCard Emily 700 Pending\nBankTransfer Mark 1000 Completed",
+                "expected": "Transactions:\nCreditCard:\nEmily 700 Pending\nBankTransfer:\nMark 1000 Completed"
+            },
+            {
+                "input": "4\nPayPal Chris 400 Completed\nBankTransfer Natalie 800 Pending\nCreditCard Olivia 1500 Completed\nCreditCard Ethan 600 Pending",
+                "expected": "Transactions:\nCreditCard:\nOlivia 1500 Completed\nEthan 600 Pending\nPayPal:\nChris 400 Completed\nBankTransfer:\nNatalie 800 Pending"
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "type": "OOP",
+        "difficulty": "Medium",
+        "title": "#interface04. Quản lý các phương tiện giao thông",
+        "description": "Xây dựng hệ thống quản lý phương tiện giao thông gồm interface Vehicle và các lớp con Car, Bike, và Bus. Interface Vehicle có các phương thức abstract startEngine(), stopEngine(), và getDetails().",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 50). Tiếp theo là n dòng, mỗi dòng chứa thông tin phương tiện (loại, tên phương tiện, số ghế, trạng thái hoạt động).",
+        "exe_output": "In danh sách phương tiện theo trạng thái và loại phương tiện, kèm thông tin chi tiết.",
+        "testCases": [
+            {
+                "input": "3\nCar Sedan 4 Running\nBike MountainBike 1 Stopped\nBus CityBus 50 Running",
+                "expected": "Vehicles:\nCar:\nSedan 4 Running\nBus:\nCityBus 50 Running\nBike:\nMountainBike 1 Stopped"
+            },
+            {
+                "input": "4\nCar SUV 7 Running\nBike RoadBike 1 Running\nBus SchoolBus 40 Stopped\nCar Coupe 2 Stopped",
+                "expected": "Vehicles:\nCar:\nSUV 7 Running\nCoupe 2 Stopped\nBike:\nRoadBike 1 Running\nBus:\nSchoolBus 40 Stopped"
+            },
+            {
+                "input": "5\nBus IntercityBus 60 Running\nBike ElectricBike 1 Stopped\nCar Hatchback 5 Running\nBus Minibus 20 Stopped\nCar Convertible 2 Running",
+                "expected": "Vehicles:\nCar:\nHatchback 5 Running\nConvertible 2 Running\nBus:\nIntercityBus 60 Running\nMinibus 20 Stopped\nBike:\nElectricBike 1 Stopped"
+            },
+            {
+                "input": "6\nCar LuxuryCar 5 Running\nBike Scooter 2 Stopped\nBus DoubleDecker 80 Running\nCar CompactCar 4 Stopped\nBus ShuttleBus 25 Running\nBike TouringBike 1 Running",
+                "expected": "Vehicles:\nCar:\nLuxuryCar 5 Running\nCompactCar 4 Stopped\nBike:\nTouringBike 1 Running\nScooter 2 Stopped\nBus:\nDoubleDecker 80 Running\nShuttleBus 25 Running"
+            },
+            {
+                "input": "2\nBike BMX 1 Stopped\nCar ElectricCar 5 Running",
+                "expected": "Vehicles:\nCar:\nElectricCar 5 Running\nBike:\nBMX 1 Stopped"
+            },
+            {
+                "input": "4\nBus TouristBus 55 Running\nCar Sedan 4 Stopped\nBike Cruiser 1 Running\nBus AirportShuttle 30 Stopped",
+                "expected": "Vehicles:\nCar:\nSedan 4 Stopped\nBike:\nCruiser 1 Running\nBus:\nTouristBus 55 Running\nAirportShuttle 30 Stopped"
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "type": "OOP",
+        "difficulty": "Easy",
+        "title": "#mulInherit01. Quản lý nhân viên đa vai trò",
+        "description": "Xây dựng hệ thống quản lý nhân viên với các lớp BaseEmployee, Manager, và Developer. Lớp Manager và Developer kế thừa BaseEmployee và có các thuộc tính, phương thức riêng. Một số nhân viên có thể vừa là Manager vừa là Developer (đa vai trò).",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 50). Tiếp theo là n dòng, mỗi dòng chứa thông tin nhân viên (loại, tên, mức lương, thông tin đặc thù).",
+        "exe_output": "In danh sách nhân viên theo mức lương giảm dần, kèm thông tin đặc thù của họ.",
+        "testCases": [
+            {
+                "input": "3\nManager Alice 8000 TeamSize:5\nDeveloper Bob 7000 ProgrammingLanguage:Python\nManagerDeveloper Charlie 10000 TeamSize:3,ProgrammingLanguage:Java",
+                "expected": "Employees:\nCharlie 10000 TeamSize:3,ProgrammingLanguage:Java\nAlice 8000 TeamSize:5\nBob 7000 ProgrammingLanguage:Python"
+            },
+            {
+                "input": "4\nManager David 9000 TeamSize:7\nDeveloper Eva 6500 ProgrammingLanguage:JavaScript\nManagerDeveloper Frank 12000 TeamSize:4,ProgrammingLanguage:C++\nDeveloper Grace 7000 ProgrammingLanguage:Ruby",
+                "expected": "Employees:\nFrank 12000 TeamSize:4,ProgrammingLanguage:C++\nDavid 9000 TeamSize:7\nGrace 7000 ProgrammingLanguage:Ruby\nEva 6500 ProgrammingLanguage:JavaScript"
+            },
+            {
+                "input": "5\nManager Henry 8500 TeamSize:6\nDeveloper Iris 7500 ProgrammingLanguage:PHP\nManagerDeveloper Jack 11000 TeamSize:5,ProgrammingLanguage:Python\nDeveloper Kate 7200 ProgrammingLanguage:Java\nManager Liam 9500 TeamSize:8",
+                "expected": "Employees:\nJack 11000 TeamSize:5,ProgrammingLanguage:Python\nLiam 9500 TeamSize:8\nHenry 8500 TeamSize:6\nIris 7500 ProgrammingLanguage:PHP\nKate 7200 ProgrammingLanguage:Java"
+            },
+            {
+                "input": "6\nManagerDeveloper Mia 12500 TeamSize:10,ProgrammingLanguage:Go\nDeveloper Noah 7700 ProgrammingLanguage:Swift\nManager Oliver 9100 TeamSize:9\nManagerDeveloper Penelope 10500 TeamSize:6,ProgrammingLanguage:Rust\nDeveloper Quinn 6800 ProgrammingLanguage:Kotlin\nManager Rachel 9700 TeamSize:7",
+                "expected": "Employees:\nMia 12500 TeamSize:10,ProgrammingLanguage:Go\nPenelope 10500 TeamSize:6,ProgrammingLanguage:Rust\nRachel 9700 TeamSize:7\nOliver 9100 TeamSize:9\nNoah 7700 ProgrammingLanguage:Swift\nQuinn 6800 ProgrammingLanguage:Kotlin"
+            },
+            {
+                "input": "2\nManager Sophie 8800 TeamSize:8\nDeveloper Thomas 7200 ProgrammingLanguage:Scala",
+                "expected": "Employees:\nSophie 8800 TeamSize:8\nThomas 7200 ProgrammingLanguage:Scala"
+            },
+            {
+                "input": "4\nManager Uma 9400 TeamSize:12\nManagerDeveloper Victor 13000 TeamSize:8,ProgrammingLanguage:Perl\nDeveloper William 8000 ProgrammingLanguage:Rust\nManager Xander 9700 TeamSize:10",
+                "expected": "Employees:\nVictor 13000 TeamSize:8,ProgrammingLanguage:Perl\nXander 9700 TeamSize:10\nUma 9400 TeamSize:12\nWilliam 8000 ProgrammingLanguage:Rust"
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "type": "OOP",
+        "difficulty": "Easy",
+        "title": "#mulInherit02. Quản lý vai trò phức hợp",
+        "description": "Xây dựng hệ thống quản lý vai trò phức hợp với các lớp BaseRole, Teacher, Researcher và TeacherResearcher. Lớp Teacher và Researcher kế thừa BaseRole. TeacherResearcher kế thừa cả Teacher và Researcher.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 50). Tiếp theo là n dòng, mỗi dòng chứa thông tin nhân viên (loại, tên, chuyên ngành hoặc lĩnh vực nghiên cứu, số giờ giảng dạy hoặc số bài báo).",
+        "exe_output": "In danh sách nhân viên theo loại vai trò và in thông tin chi tiết.",
+        "testCases": [
+            {
+                "input": "3\nTeacher Alice Mathematics 20\nResearcher Bob AI 15\nTeacherResearcher Charlie Physics 10,QuantumComputing 5",
+                "expected": "Roles:\nTeacher:\nAlice Mathematics 20\nResearcher:\nBob AI 15\nTeacherResearcher:\nCharlie Physics 10,QuantumComputing 5"
+            },
+            {
+                "input": "4\nTeacher David Chemistry 18\nResearcher Eva MachineLearning 12\nTeacherResearcher Frank Biology 15,Genomics 8\nTeacher Grace ComputerScience 22",
+                "expected": "Roles:\nTeacher:\nDavid Chemistry 18\nGrace ComputerScience 22\nResearcher:\nEva MachineLearning 12\nTeacherResearcher:\nFrank Biology 15,Genomics 8"
+            },
+            {
+                "input": "5\nTeacher Henry Literature 16\nResearcher Iris Robotics 20\nTeacherResearcher Jack Economics 12,BehavioralScience 7\nTeacher Kate History 14\nResearcher Liam Cybersecurity 10",
+                "expected": "Roles:\nTeacher:\nHenry Literature 16\nKate History 14\nResearcher:\nIris Robotics 20\nLiam Cybersecurity 10\nTeacherResearcher:\nJack Economics 12,BehavioralScience 7"
+            },
+            {
+                "input": "6\nTeacher Michael Physics 20\nResearcher Nina Astronomy 15\nTeacherResearcher Oscar Mathematics 10,QuantumPhysics 6\nTeacher Olivia Art 18\nResearcher Paul Neuroscience 11\nTeacherResearcher Quinn Biology 12,Ecology 5",
+                "expected": "Roles:\nTeacher:\nMichael Physics 20\nOlivia Art 18\nResearcher:\nNina Astronomy 15\nPaul Neuroscience 11\nTeacherResearcher:\nOscar Mathematics 10,QuantumPhysics 6\nQuinn Biology 12,Ecology 5"
+            },
+            {
+                "input": "2\nTeacherResearcher Rachel Chemistry 14,AnalyticalChemistry 7\nResearcher Sam DataScience 9",
+                "expected": "Roles:\nResearcher:\nSam DataScience 9\nTeacherResearcher:\nRachel Chemistry 14,AnalyticalChemistry 7"
+            },
+            {
+                "input": "4\nTeacher Tom Philosophy 12\nResearcher Ursula CognitiveScience 13\nTeacherResearcher Victor Sociology 11,SocialNetworks 4\nTeacher Wendy Music 17",
+                "expected": "Roles:\nTeacher:\nTom Philosophy 12\nWendy Music 17\nResearcher:\nUrsula CognitiveScience 13\nTeacherResearcher:\nVictor Sociology 11,SocialNetworks 4"
+            }
+        ]
     }
     
-        
 ];
 
 export default exercises;
