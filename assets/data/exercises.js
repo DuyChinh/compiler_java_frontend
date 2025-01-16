@@ -1583,7 +1583,43 @@ const exercises = [
                 "expected": "Auction Items:\nType: Electronics, Name: Camera, ID: A018, Starting Price: 700, Warranty: 2 years, Highest Bid: 800\nType: Electronics, Name: Laptop, ID: A023, Starting Price: 1000, Warranty: 3 years, Highest Bid: 0"
             }
         ]
-    }        
+    },
+    {
+        "id": 63,
+        "type": "OOP",
+        "difficulty": "Advanced",
+        "title": "#poly06. Hệ thống quản lý ngân hàng",
+        "description": "Xây dựng hệ thống quản lý tài khoản ngân hàng. Sử dụng lớp cha BankAccount làm lớp cơ bản và các lớp con SavingsAccount, CheckingAccount, và BusinessAccount kế thừa từ BankAccount. Mỗi loại tài khoản có thuộc tính và hành vi đặc trưng riêng. Hệ thống cần hỗ trợ các tính năng như gửi tiền, rút tiền, tính lãi suất hàng tháng, và tìm kiếm tài khoản theo số dư tối thiểu hoặc loại tài khoản.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 50), số lượng tài khoản. Tiếp theo là n dòng, mỗi dòng chứa thông tin tài khoản (loại, tên khách hàng, mã tài khoản, số dư, và thông tin bổ sung: interestRate cho SavingsAccount, overdraftLimit cho CheckingAccount, hoặc creditLimit cho BusinessAccount). Sau đó, có m dòng yêu cầu (type, accountId, amount). Dòng cuối cùng chứa truy vấn (searchType, searchValue).",
+        "exe_output": "In danh sách tài khoản thỏa mãn truy vấn (nếu có) hoặc thông báo không tìm thấy tài khoản nào.",
+        "testCases": [
+            {
+                "input": "3\nSavingsAccount Alice SA001 5000 0.05\nCheckingAccount Bob CA001 2000 500\nBusinessAccount Carol BA001 10000 2000\n3\ndeposit SA001 2000\nwithdraw CA001 1500\nwithdraw BA001 5000\nbalance 3000",
+                "expected": "Accounts:\nType: SavingsAccount, Customer: Alice, ID: SA001, Balance: 7000, Interest Rate: 5.0%\nType: BusinessAccount, Customer: Carol, ID: BA001, Balance: 5000, Credit Limit: 2000"
+            },
+            {
+                "input": "4\nSavingsAccount David SA002 3000 0.03\nCheckingAccount Eve CA002 1000 300\nBusinessAccount Frank BA002 20000 5000\nSavingsAccount Grace SA003 8000 0.04\n2\nwithdraw CA002 1200\ndeposit SA003 2000\ntype SavingsAccount",
+                "expected": "Accounts:\nType: SavingsAccount, Customer: David, ID: SA002, Balance: 3000, Interest Rate: 3.0%\nType: SavingsAccount, Customer: Grace, ID: SA003, Balance: 10000, Interest Rate: 4.0%"
+            },
+            {
+                "input": "2\nBusinessAccount Henry BA003 15000 3000\nCheckingAccount Irene CA003 500 200\n1\nwithdraw BA003 16000\nbalance 1000",
+                "expected": "Accounts:\nNo accounts found."
+            },
+            {
+                "input": "5\nSavingsAccount Jack SA004 2000 0.02\nCheckingAccount Kate CA004 400 100\nBusinessAccount Liam BA004 30000 10000\nSavingsAccount Mia SA005 5000 0.03\nCheckingAccount Noah CA005 2500 800\n4\ndeposit CA004 300\nwithdraw SA005 1000\ndeposit BA004 5000\nwithdraw CA005 2700\ntype CheckingAccount",
+                "expected": "Accounts:\nType: CheckingAccount, Customer: Kate, ID: CA004, Balance: 700, Overdraft Limit: 100\nType: CheckingAccount, Customer: Noah, ID: CA005, Balance: -200, Overdraft Limit: 800"
+            },
+            {
+                "input": "3\nBusinessAccount Oliver BA005 40000 5000\nSavingsAccount Peter SA006 10000 0.05\nCheckingAccount Quinn CA006 1500 500\n2\nwithdraw BA005 42000\ndeposit SA006 5000\nbalance 1500",
+                "expected": "Accounts:\nType: SavingsAccount, Customer: Peter, ID: SA006, Balance: 15000, Interest Rate: 5.0%\nType: CheckingAccount, Customer: Quinn, ID: CA006, Balance: 1500, Overdraft Limit: 500"
+            },
+            {
+                "input": "6\nSavingsAccount Riley SA007 7000 0.03\nCheckingAccount Sarah CA007 2000 400\nBusinessAccount Thomas BA007 10000 3000\nSavingsAccount Uma SA008 6000 0.04\nCheckingAccount Victor CA008 1000 500\nBusinessAccount Wendy BA008 25000 10000\n5\nwithdraw SA007 2000\ndeposit CA007 1000\ndeposit BA007 5000\nwithdraw BA008 26000\nwithdraw CA008 1200\ntype BusinessAccount",
+                "expected": "Accounts:\nType: BusinessAccount, Customer: Thomas, ID: BA007, Balance: 15000, Credit Limit: 3000\nType: BusinessAccount, Customer: Wendy, ID: BA008, Balance: -1000, Credit Limit: 10000"
+            }
+        ]
+    }
+            
 ];
 
 export default exercises;
