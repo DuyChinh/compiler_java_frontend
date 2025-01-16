@@ -1618,6 +1618,41 @@ const exercises = [
                 "expected": "Accounts:\nType: BusinessAccount, Customer: Thomas, ID: BA007, Balance: 15000, Credit Limit: 3000\nType: BusinessAccount, Customer: Wendy, ID: BA008, Balance: -1000, Credit Limit: 10000"
             }
         ]
+    },
+    {
+        "id": 64,
+        "type": "OOP",
+        "difficulty": "Medium",
+        "title": "#poly07. Quản lý thư viện sách",
+        "description": "Xây dựng hệ thống quản lý thư viện sách. Sử dụng lớp cha Book làm lớp cơ bản và các lớp con FictionBook, ScienceBook, và HistoryBook kế thừa từ Book. Hệ thống cần hỗ trợ các chức năng như thêm sách, hiển thị sách, và tìm kiếm sách theo thể loại hoặc số lượng tối thiểu.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 50), số lượng sách. Tiếp theo là n dòng, mỗi dòng chứa thông tin sách (loại, tên sách, mã sách, số lượng, và thông tin bổ sung: genre cho FictionBook, field cho ScienceBook, hoặc period cho HistoryBook). Dòng cuối chứa truy vấn tìm kiếm (searchType, searchValue).",
+        "exe_output": "In danh sách sách thỏa mãn truy vấn hoặc thông báo không tìm thấy sách nào.",
+        "testCases": [
+            {
+                "input": "3\nFictionBook HarryPotter F001 10 Fantasy\nScienceBook QuantumPhysics S001 5 Physics\nHistoryBook WorldWar H001 8 20thCentury\ntype FictionBook",
+                "expected": "Books:\nType: FictionBook, Name: HarryPotter, ID: F001, Quantity: 10, Genre: Fantasy"
+            },
+            {
+                "input": "4\nFictionBook LordOfTheRings F002 12 Adventure\nScienceBook Relativity S002 7 Physics\nHistoryBook AncientEgypt H002 4 AncientHistory\nFictionBook GameOfThrones F003 6 Fantasy\nquantity 6",
+                "expected": "Books:\nType: FictionBook, Name: LordOfTheRings, ID: F002, Quantity: 12, Genre: Adventure\nType: ScienceBook, Name: Relativity, ID: S002, Quantity: 7, Field: Physics\nType: FictionBook, Name: GameOfThrones, ID: F003, Quantity: 6, Genre: Fantasy"
+            },
+            {
+                "input": "2\nScienceBook ChemistryBasics S003 3 Chemistry\nHistoryBook Renaissance H003 5 15thCentury\ntype ScienceBook",
+                "expected": "Books:\nType: ScienceBook, Name: ChemistryBasics, ID: S003, Quantity: 3, Field: Chemistry"
+            },
+            {
+                "input": "5\nFictionBook Twilight F004 15 Romance\nScienceBook BiologyBasics S004 9 Biology\nHistoryBook MedievalTimes H004 7 Medieval\nScienceBook Genetics S005 10 Biology\nFictionBook TheHobbit F005 8 Fantasy\ntype ScienceBook",
+                "expected": "Books:\nType: ScienceBook, Name: BiologyBasics, ID: S004, Quantity: 9, Field: Biology\nType: ScienceBook, Name: Genetics, ID: S005, Quantity: 10, Field: Biology"
+            },
+            {
+                "input": "3\nFictionBook MazeRunner F006 11 SciFi\nHistoryBook ColdWar H005 6 20thCentury\nScienceBook Astrophysics S006 4 Space\ntype HistoryBook",
+                "expected": "Books:\nType: HistoryBook, Name: ColdWar, ID: H005, Quantity: 6, Period: 20thCentury"
+            },
+            {
+                "input": "6\nFictionBook Narnia F007 9 Fantasy\nScienceBook Programming101 S007 15 ComputerScience\nHistoryBook WW2 H006 10 20thCentury\nFictionBook Dune F008 5 SciFi\nScienceBook ArtificialIntelligence S008 12 MachineLearning\nHistoryBook FrenchRevolution H007 7 18thCentury\nquantity 10",
+                "expected": "Books:\nType: ScienceBook, Name: Programming101, ID: S007, Quantity: 15, Field: ComputerScience\nType: HistoryBook, Name: WW2, ID: H006, Quantity: 10, Period: 20thCentury\nType: ScienceBook, Name: ArtificialIntelligence, ID: S008, Quantity: 12, Field: MachineLearning"
+            }
+        ]
     }
             
 ];
