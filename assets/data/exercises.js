@@ -1413,8 +1413,177 @@ const exercises = [
             }
         ]
     },
-    
-        
+    {
+        "id": 57,
+        "type": "OOP",
+        "difficulty": "Easy",
+        "title": "#poly01. Quản lý hệ thống phương tiện giao thông",
+        "description": "Xây dựng hệ thống quản lý thông tin phương tiện giao thông. Sử dụng lớp cha Vehicle làm lớp cơ bản, và các lớp Car và Motorcycle kế thừa từ Vehicle. Mỗi loại phương tiện có thuộc tính và hành vi đặc trưng riêng. Hệ thống cần hỗ trợ việc hiển thị thông tin phương tiện.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 10), số lượng phương tiện. Tiếp theo là n dòng, mỗi dòng chứa thông tin phương tiện (loại, tên, mã, giá, và thông tin bổ sung: seats cho Car hoặc fuelCapacity cho Motorcycle).",
+        "exe_output": "Hiển thị danh sách thông tin các phương tiện, bao gồm loại phương tiện, tên, mã, giá, và thông tin bổ sung tương ứng.",
+        "testCases": [
+            {
+                "input": "3\nCar Toyota VN001 50000 4\nMotorcycle Honda VN002 15000 10\nCar BMW VN003 70000 5",
+                "expected": "Vehicle Information:\nType: Car, Name: Toyota, ID: VN001, Price: 50000, Seats: 4\nType: Motorcycle, Name: Honda, ID: VN002, Price: 15000, Fuel Capacity: 10\nType: Car, Name: BMW, ID: VN003, Price: 70000, Seats: 5"
+            },
+            {
+                "input": "2\nMotorcycle Yamaha VN101 12000 8\nCar Ford VN102 60000 7",
+                "expected": "Vehicle Information:\nType: Motorcycle, Name: Yamaha, ID: VN101, Price: 12000, Fuel Capacity: 8\nType: Car, Name: Ford, ID: VN102, Price: 60000, Seats: 7"
+            },
+            {
+                "input": "1\nCar Audi VN201 80000 5",
+                "expected": "Vehicle Information:\nType: Car, Name: Audi, ID: VN201, Price: 80000, Seats: 5"
+            },
+            {
+                "input": "2\nMotorcycle Suzuki VN301 10000 6\nMotorcycle Kawasaki VN302 18000 9",
+                "expected": "Vehicle Information:\nType: Motorcycle, Name: Suzuki, ID: VN301, Price: 10000, Fuel Capacity: 6\nType: Motorcycle, Name: Kawasaki, ID: VN302, Price: 18000, Fuel Capacity: 9"
+            },
+            {
+                "input": "4\nCar Tesla VN401 90000 5\nMotorcycle Vespa VN402 20000 7\nCar Hyundai VN403 45000 4\nMotorcycle Ducati VN404 25000 12",
+                "expected": "Vehicle Information:\nType: Car, Name: Tesla, ID: VN401, Price: 90000, Seats: 5\nType: Motorcycle, Name: Vespa, ID: VN402, Price: 20000, Fuel Capacity: 7\nType: Car, Name: Hyundai, ID: VN403, Price: 45000, Seats: 4\nType: Motorcycle, Name: Ducati, ID: VN404, Price: 25000, Fuel Capacity: 12"
+            }
+        ]
+    },
+    {
+        "id": 59,
+        "type": "OOP",
+        "difficulty": "Easy",
+        "title": "#poly02. Quản lý động vật trong sở thú",
+        "description": "Xây dựng hệ thống quản lý động vật trong sở thú. Sử dụng lớp cha Animal làm lớp cơ bản và các lớp con Mammal và Bird kế thừa từ Animal. Mỗi loài động vật có thuộc tính và hành vi riêng. Hệ thống cần hỗ trợ hiển thị thông tin về các động vật.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 10), số lượng động vật. Tiếp theo là n dòng, mỗi dòng chứa thông tin động vật (loại, tên, mã, tuổi, và thông tin bổ sung: furColor cho Mammal hoặc wingSpan cho Bird).",
+        "exe_output": "Hiển thị danh sách thông tin các động vật, bao gồm loại, tên, mã, tuổi và thông tin bổ sung tương ứng.",
+        "testCases": [
+            {
+                "input": "3\nMammal Tiger M001 5 Orange\nBird Parrot B001 2 50\nMammal Elephant M002 10 Gray",
+                "expected": "Animal Information:\nType: Mammal, Name: Tiger, ID: M001, Age: 5, Fur Color: Orange\nType: Bird, Name: Parrot, ID: B001, Age: 2, Wing Span: 50\nType: Mammal, Name: Elephant, ID: M002, Age: 10, Fur Color: Gray"
+            },
+            {
+                "input": "2\nBird Eagle B002 3 200\nMammal Lion M003 8 Golden",
+                "expected": "Animal Information:\nType: Bird, Name: Eagle, ID: B002, Age: 3, Wing Span: 200\nType: Mammal, Name: Lion, ID: M003, Age: 8, Fur Color: Golden"
+            },
+            {
+                "input": "1\nMammal Panda M004 7 Black-White",
+                "expected": "Animal Information:\nType: Mammal, Name: Panda, ID: M004, Age: 7, Fur Color: Black-White"
+            },
+            {
+                "input": "4\nMammal Monkey M005 4 Brown\nBird Sparrow B003 1 20\nBird Owl B004 6 80\nMammal Giraffe M006 12 Yellow",
+                "expected": "Animal Information:\nType: Mammal, Name: Monkey, ID: M005, Age: 4, Fur Color: Brown\nType: Bird, Name: Sparrow, ID: B003, Age: 1, Wing Span: 20\nType: Bird, Name: Owl, ID: B004, Age: 6, Wing Span: 80\nType: Mammal, Name: Giraffe, ID: M006, Age: 12, Fur Color: Yellow"
+            },
+            {
+                "input": "2\nBird Penguin B005 3 50\nMammal Bear M007 9 Dark-Brown",
+                "expected": "Animal Information:\nType: Bird, Name: Penguin, ID: B005, Age: 3, Wing Span: 50\nType: Mammal, Name: Bear, ID: M007, Age: 9, Fur Color: Dark-Brown"
+            },
+            {
+                "input": "5\nBird Peacock B006 5 120\nMammal Fox M008 4 Red\nBird Falcon B007 3 150\nMammal Dog M009 2 White\nBird Crow B008 1 60",
+                "expected": "Animal Information:\nType: Bird, Name: Peacock, ID: B006, Age: 5, Wing Span: 120\nType: Mammal, Name: Fox, ID: M008, Age: 4, Fur Color: Red\nType: Bird, Name: Falcon, ID: B007, Age: 3, Wing Span: 150\nType: Mammal, Name: Dog, ID: M009, Age: 2, Fur Color: White\nType: Bird, Name: Crow, ID: B008, Age: 1, Wing Span: 60"
+            }
+        ]
+    },
+    {
+        "id": 60,
+        "type": "OOP",
+        "difficulty": "Medium",
+        "title": "#poly03. Quản lý sản phẩm trong cửa hàng",
+        "description": "Xây dựng hệ thống quản lý sản phẩm trong cửa hàng. Sử dụng lớp cha Product làm lớp cơ bản và các lớp con Electronics, Clothes và Food kế thừa từ Product. Mỗi loại sản phẩm có thuộc tính và hành vi đặc trưng riêng. Hệ thống cần hỗ trợ hiển thị danh sách sản phẩm và tìm kiếm sản phẩm theo tên hoặc giá trị tối thiểu.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 20), số lượng sản phẩm. Tiếp theo là n dòng, mỗi dòng chứa thông tin sản phẩm (loại, tên, mã, giá, và thông tin bổ sung: warranty cho Electronics, size cho Clothes, hoặc expiryDate cho Food). Dòng cuối chứa truy vấn tìm kiếm (searchType, searchValue).",
+        "exe_output": "In danh sách sản phẩm thỏa mãn truy vấn hoặc thông báo không tìm thấy sản phẩm nào.",
+        "testCases": [
+            {
+                "input": "3\nElectronics TV E001 15000 2\nClothes Shirt C001 500 L\nFood Bread F001 50 2025-01-20\nname TV",
+                "expected": "Products:\nType: Electronics, Name: TV, ID: E001, Price: 15000, Warranty: 2 years"
+            },
+            {
+                "input": "4\nFood Milk F002 30 2025-02-01\nClothes Pants C002 700 M\nElectronics Laptop E002 30000 3\nFood Butter F003 40 2025-01-25\nprice 100",
+                "expected": "Products:\nType: Food, Name: Milk, ID: F002, Price: 30, Expiry Date: 2025-02-01\nType: Food, Name: Butter, ID: F003, Price: 40, Expiry Date: 2025-01-25"
+            },
+            {
+                "input": "2\nClothes Jacket C003 1500 XL\nElectronics Smartphone E003 10000 1\nname Laptop",
+                "expected": "Products:\nNo products found."
+            },
+            {
+                "input": "5\nFood Cheese F004 100 2025-05-15\nElectronics Fridge E004 20000 5\nClothes TShirt C004 600 S\nFood Chips F005 20 2025-03-01\nElectronics WashingMachine E005 18000 3\nprice 15000",
+                "expected": "Products:\nType: Food, Name: Cheese, ID: F004, Price: 100, Expiry Date: 2025-05-15\nType: Clothes, Name: TShirt, ID: C004, Price: 600, Size: S\nType: Food, Name: Chips, ID: F005, Price: 20, Expiry Date: 2025-03-01"
+            },
+            {
+                "input": "3\nClothes Coat C005 2000 XXL\nFood Yogurt F006 15 2025-01-30\nElectronics Speaker E006 5000 1\nname Coat",
+                "expected": "Products:\nType: Clothes, Name: Coat, ID: C005, Price: 2000, Size: XXL"
+            },
+            {
+                "input": "6\nFood Juice F007 25 2025-04-10\nClothes Dress C006 800 M\nElectronics Monitor E007 12000 2\nFood Salad F008 20 2025-02-01\nElectronics Headphones E008 2500 1\nClothes Socks C007 100 S\nprice 500",
+                "expected": "Products:\nType: Food, Name: Juice, ID: F007, Price: 25, Expiry Date: 2025-04-10\nType: Food, Name: Salad, ID: F008, Price: 20, Expiry Date: 2025-02-01\nType: Clothes, Name: Socks, ID: C007, Price: 100, Size: S"
+            }
+        ]
+    },
+    {
+        "id": 61,
+        "type": "OOP",
+        "difficulty": "Medium",
+        "title": "#poly04. Quản lý nhân sự công ty",
+        "description": "Xây dựng hệ thống quản lý nhân sự trong công ty. Sử dụng lớp cha Employee làm lớp cơ bản và các lớp con Manager, Developer và Tester kế thừa từ Employee. Mỗi loại nhân viên có thuộc tính và hành vi đặc trưng riêng. Hệ thống cần hỗ trợ hiển thị danh sách nhân viên và tìm kiếm nhân viên theo bộ phận hoặc lương tối thiểu.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 20), số lượng nhân viên. Tiếp theo là n dòng, mỗi dòng chứa thông tin nhân viên (loại, tên, mã, lương, và thông tin bổ sung: team cho Manager, programmingLanguage cho Developer, hoặc testTool cho Tester). Dòng cuối chứa truy vấn tìm kiếm (searchType, searchValue).",
+        "exe_output": "In danh sách nhân viên thỏa mãn truy vấn hoặc thông báo không tìm thấy nhân viên nào.",
+        "testCases": [
+            {
+                "input": "3\nManager Alice M001 5000 HR\nDeveloper Bob D001 4000 Java\nTester Carol T001 3500 Selenium\ndepartment HR",
+                "expected": "Employees:\nType: Manager, Name: Alice, ID: M001, Salary: 5000, Team: HR"
+            },
+            {
+                "input": "4\nDeveloper David D002 4500 Python\nTester Eve T002 3000 JIRA\nManager Frank M002 6000 IT\nDeveloper Grace D003 4000 C++\nsalary 4000",
+                "expected": "Employees:\nType: Developer, Name: David, ID: D002, Salary: 4500, Programming Language: Python\nType: Manager, Name: Frank, ID: M002, Salary: 6000, Team: IT\nType: Developer, Name: Grace, ID: D003, Salary: 4000, Programming Language: C++"
+            },
+            {
+                "input": "2\nTester Henry T003 3200 Postman\nManager Irene M003 7000 Marketing\ndepartment Finance",
+                "expected": "Employees:\nNo employees found."
+            },
+            {
+                "input": "5\nDeveloper Jack D004 5000 JavaScript\nTester Kate T004 2800 Appium\nManager Leo M004 5500 Sales\nDeveloper Mia D005 4200 C#\nManager Nina M005 4800 Finance\nsalary 5000",
+                "expected": "Employees:\nType: Developer, Name: Jack, ID: D004, Salary: 5000, Programming Language: JavaScript\nType: Manager, Name: Leo, ID: M004, Salary: 5500, Team: Sales"
+            },
+            {
+                "input": "3\nDeveloper Oscar D006 3900 PHP\nTester Paula T005 3600 TestRail\nManager Quinn M006 4500 Operations\ndepartment Operations",
+                "expected": "Employees:\nType: Manager, Name: Quinn, ID: M006, Salary: 4500, Team: Operations"
+            },
+            {
+                "input": "6\nDeveloper Ryan D007 3800 Ruby\nTester Sophia T006 3100 JUnit\nManager Thomas M007 6000 Admin\nTester Ulysses T007 2900 LoadRunner\nDeveloper Victor D008 4500 Swift\nManager Wendy M008 5200 HR\nsalary 4000",
+                "expected": "Employees:\nType: Manager, Name: Thomas, ID: M007, Salary: 6000, Team: Admin\nType: Developer, Name: Victor, ID: D008, Salary: 4500, Programming Language: Swift\nType: Manager, Name: Wendy, ID: M008, Salary: 5200, Team: HR"
+            }
+        ]
+    },
+    {
+        "id": 62,
+        "type": "OOP",
+        "difficulty": "Advanced",
+        "title": "#poly05. Quản lý hệ thống đấu giá",
+        "description": "Xây dựng hệ thống quản lý đấu giá với nhiều loại sản phẩm. Sử dụng lớp cha AuctionItem làm lớp cơ bản và các lớp con Electronics, ArtPiece, và Collectible kế thừa từ AuctionItem. Hệ thống cần hỗ trợ các tính năng như thêm sản phẩm, đặt giá thầu, tìm kiếm sản phẩm theo giá thầu cao nhất hoặc theo loại.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 50), số lượng sản phẩm. Tiếp theo là n dòng, mỗi dòng chứa thông tin sản phẩm (loại, tên, mã, giá khởi điểm, thông tin bổ sung: warranty cho Electronics, artist cho ArtPiece, hoặc rarity cho Collectible). Sau đó, có m dòng là các giá thầu (itemId, bidAmount). Dòng cuối cùng chứa truy vấn (searchType, searchValue).",
+        "exe_output": "In danh sách sản phẩm thỏa mãn truy vấn (nếu có) hoặc thông báo không tìm thấy sản phẩm nào.",
+        "testCases": [
+            {
+                "input": "3\nElectronics Laptop A001 500 1\nArtPiece MonaLisa A002 1000 Leonardo\nCollectible Coin A003 300 Rare\n3\nA001 550\nA002 1200\nA003 350\nhighestBid",
+                "expected": "Auction Items:\nType: ArtPiece, Name: MonaLisa, ID: A002, Starting Price: 1000, Artist: Leonardo, Highest Bid: 1200"
+            },
+            {
+                "input": "4\nCollectible Stamp A004 200 Common\nElectronics Phone A005 800 2\nArtPiece StarryNight A006 2000 VanGogh\nCollectible Figurine A007 500 Rare\n5\nA004 250\nA005 850\nA006 2500\nA007 600\nA005 900\ntype Collectible",
+                "expected": "Auction Items:\nType: Collectible, Name: Stamp, ID: A004, Starting Price: 200, Rarity: Common, Highest Bid: 250\nType: Collectible, Name: Figurine, ID: A007, Starting Price: 500, Rarity: Rare, Highest Bid: 600"
+            },
+            {
+                "input": "2\nElectronics TV A008 1000 3\nArtPiece TheScream A009 3000 Munch\n1\nA008 1200\nhighestBid",
+                "expected": "Auction Items:\nType: Electronics, Name: TV, ID: A008, Starting Price: 1000, Warranty: 3 years, Highest Bid: 1200"
+            },
+            {
+                "input": "5\nElectronics Speaker A010 600 2\nArtPiece GirlWithAPearlEarring A011 2500 Vermeer\nCollectible Card A012 150 Rare\nElectronics SmartWatch A013 300 1\nArtPiece Sunflowers A014 4000 VanGogh\n4\nA011 2700\nA012 200\nA013 350\nA014 4500\ntype ArtPiece",
+                "expected": "Auction Items:\nType: ArtPiece, Name: GirlWithAPearlEarring, ID: A011, Starting Price: 2500, Artist: Vermeer, Highest Bid: 2700\nType: ArtPiece, Name: Sunflowers, ID: A014, Starting Price: 4000, Artist: VanGogh, Highest Bid: 4500"
+            },
+            {
+                "input": "3\nCollectible Postcard A015 100 Vintage\nElectronics Headphones A016 800 1\nArtPiece WaterLilies A017 3000 Monet\n3\nA015 150\nA016 900\nA017 3500\nhighestBid",
+                "expected": "Auction Items:\nType: ArtPiece, Name: WaterLilies, ID: A017, Starting Price: 3000, Artist: Monet, Highest Bid: 3500"
+            },
+            {
+                "input": "6\nElectronics Camera A018 700 2\nCollectible Poster A019 50 Limited\nArtPiece TheLastSupper A020 5000 DaVinci\nCollectible Stamp A021 200 Common\nArtPiece Guernica A022 4000 Picasso\nElectronics Laptop A023 1000 3\n4\nA018 800\nA019 100\nA020 5500\nA022 4500\ntype Electronics",
+                "expected": "Auction Items:\nType: Electronics, Name: Camera, ID: A018, Starting Price: 700, Warranty: 2 years, Highest Bid: 800\nType: Electronics, Name: Laptop, ID: A023, Starting Price: 1000, Warranty: 3 years, Highest Bid: 0"
+            }
+        ]
+    }        
 ];
 
 export default exercises;
