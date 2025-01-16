@@ -1206,8 +1206,215 @@ const exercises = [
                 "expected": "Roles:\nTeacher:\nTom Philosophy 12\nWendy Music 17\nResearcher:\nUrsula CognitiveScience 13\nTeacherResearcher:\nVictor Sociology 11,SocialNetworks 4"
             }
         ]
-    }
+    },
+    {
+        "id": 51,
+        "type": "OOP",
+        "difficulty": "Easy",
+        "title": "#abstract01. Quản lý động vật trong vườn thú",
+        "description": "Xây dựng hệ thống quản lý các loài động vật trong vườn thú. Sử dụng lớp trừu tượng Animal để làm lớp cha, các lớp Dog, Cat, và Bird kế thừa từ Animal. Các lớp này phải ghi đè phương thức abstract từ lớp cha và triển khai các hành vi đặc trưng của chúng.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 50). Tiếp theo là n dòng, mỗi dòng chứa thông tin về động vật (type, name, age, characteristic behavior).",
+        "exe_output": "In danh sách các loài động vật theo từng loại và chi tiết thông tin của chúng.",
+        "testCases": [
+            {
+                "input": "3\nDog Max 3 Barking\nCat Luna 2 Purring\nBird Tweety 1 Singing",
+                "expected": "Animals:\nDog:\nMax 3 Barking\nCat:\nLuna 2 Purring\nBird:\nTweety 1 Singing"
+            },
+            {
+                "input": "4\nDog Bella 5 Guarding\nCat Kitty 4 Sleeping\nBird Polly 2 Talking\nDog Rocky 6 Running",
+                "expected": "Animals:\nDog:\nBella 5 Guarding\nRocky 6 Running\nCat:\nKitty 4 Sleeping\nBird:\nPolly 2 Talking"
+            },
+            {
+                "input": "2\nCat Simba 3 Jumping\nBird Kiwi 1 Flying",
+                "expected": "Animals:\nCat:\nSimba 3 Jumping\nBird:\nKiwi 1 Flying"
+            },
+            {
+                "input": "5\nDog Buddy 4 Fetching\nDog Charlie 6 Barking\nCat Molly 3 Climbing\nBird Sunny 2 Chirping\nBird Sky 3 Soaring",
+                "expected": "Animals:\nDog:\nBuddy 4 Fetching\nCharlie 6 Barking\nCat:\nMolly 3 Climbing\nBird:\nSunny 2 Chirping\nSky 3 Soaring"
+            },
+            {
+                "input": "6\nCat Oscar 2 Scratching\nDog Lucy 5 Herding\nBird Coco 3 Mimicking\nDog Rex 7 Jumping\nCat Daisy 4 Playing\nBird Robin 1 Singing",
+                "expected": "Animals:\nDog:\nLucy 5 Herding\nRex 7 Jumping\nCat:\nOscar 2 Scratching\nDaisy 4 Playing\nBird:\nCoco 3 Mimicking\nRobin 1 Singing"
+            }
+        ]
+    },
+    {
+        "id": 52,
+        "type": "OOP",
+        "difficulty": "Easy",
+        "title": "#abstract02. Quản lý phương tiện giao thông",
+        "description": "Xây dựng hệ thống quản lý các phương tiện giao thông. Sử dụng lớp trừu tượng Vehicle làm lớp cha, các lớp Car, Motorbike, và Bicycle kế thừa từ Vehicle. Các lớp này phải ghi đè phương thức abstract từ lớp cha và triển khai các thuộc tính/hành vi đặc trưng.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 50). Tiếp theo là n dòng, mỗi dòng chứa thông tin về phương tiện (type, name, speed, special feature).",
+        "exe_output": "In danh sách các phương tiện theo từng loại và chi tiết thông tin của chúng.",
+        "testCases": [
+            {
+                "input": "3\nCar Tesla 120 Electric\nMotorbike Yamaha 90 Sport\nBicycle Giant 30 Mountain",
+                "expected": "Vehicles:\nCar:\nTesla 120 Electric\nMotorbike:\nYamaha 90 Sport\nBicycle:\nGiant 30 Mountain"
+            },
+            {
+                "input": "4\nCar BMW 150 Luxury\nBicycle Trek 25 Hybrid\nCar Audi 130 Sedan\nMotorbike Ducati 200 Racing",
+                "expected": "Vehicles:\nCar:\nBMW 150 Luxury\nAudi 130 Sedan\nMotorbike:\nDucati 200 Racing\nBicycle:\nTrek 25 Hybrid"
+            },
+            {
+                "input": "2\nBicycle Merida 20 Road\nMotorbike Honda 100 Cruiser",
+                "expected": "Vehicles:\nMotorbike:\nHonda 100 Cruiser\nBicycle:\nMerida 20 Road"
+            },
+            {
+                "input": "5\nCar Ford 140 SUV\nMotorbike Kawasaki 180 Adventure\nBicycle Cannondale 28 Gravel\nCar Chevrolet 130 Compact\nBicycle Scott 22 Urban",
+                "expected": "Vehicles:\nCar:\nFord 140 SUV\nChevrolet 130 Compact\nMotorbike:\nKawasaki 180 Adventure\nBicycle:\nCannondale 28 Gravel\nScott 22 Urban"
+            },
+            {
+                "input": "6\nMotorbike Harley 120 Classic\nCar Mercedes 160 Coupe\nBicycle Specialized 26 Trail\nCar Porsche 180 Sport\nBicycle Giant 25 City\nMotorbike KTM 140 Offroad",
+                "expected": "Vehicles:\nCar:\nMercedes 160 Coupe\nPorsche 180 Sport\nMotorbike:\nHarley 120 Classic\nKTM 140 Offroad\nBicycle:\nSpecialized 26 Trail\nGiant 25 City"
+            },
+            {
+                "input": "4\nCar Volvo 110 Safe\nMotorbike Suzuki 95 Touring\nBicycle Polygon 24 Cruiser\nCar Hyundai 100 Family",
+                "expected": "Vehicles:\nCar:\nVolvo 110 Safe\nHyundai 100 Family\nMotorbike:\nSuzuki 95 Touring\nBicycle:\nPolygon 24 Cruiser"
+            }
+        ]
+    },
+    {
+        "id": 53,
+        "type": "OOP",
+        "difficulty": "Medium",
+        "title": "#abstract03. Quản lý thư viện sách",
+        "description": "Xây dựng hệ thống quản lý sách trong thư viện. Sử dụng lớp trừu tượng Book làm lớp cha, các lớp Fiction, NonFiction, và ReferenceBook kế thừa từ Book. Mỗi loại sách có các thuộc tính và hành vi riêng, cần triển khai phù hợp.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 100). Tiếp theo là n dòng, mỗi dòng chứa thông tin về sách (type, title, author, price, additional info).",
+        "exe_output": "In danh sách các sách theo từng loại và chi tiết thông tin của chúng.",
+        "testCases": [
+            {
+                "input": "3\nFiction Dune FrankHerbert 15.99 SciFi\nNonFiction Sapiens YuvalNoahHarari 20.00 History\nReferenceBook OxfordDictionary OxfordPress 45.00 English",
+                "expected": "Books:\nFiction:\nDune FrankHerbert 15.99 SciFi\nNonFiction:\nSapiens YuvalNoahHarari 20.00 History\nReferenceBook:\nOxfordDictionary OxfordPress 45.00 English"
+            },
+            {
+                "input": "4\nFiction TheHobbit JRRRTolkien 12.99 Fantasy\nNonFiction TheSelfishGene RichardDawkins 18.50 Biology\nReferenceBook Encyclopedia Britannica 60.00 General\nFiction HarryPotter JKRowling 10.99 Fantasy",
+                "expected": "Books:\nFiction:\nTheHobbit JRRRTolkien 12.99 Fantasy\nHarryPotter JKRowling 10.99 Fantasy\nNonFiction:\nTheSelfishGene RichardDawkins 18.50 Biology\nReferenceBook:\nEncyclopedia Britannica 60.00 General"
+            },
+            {
+                "input": "2\nFiction Dracula BramStoker 14.00 Horror\nReferenceBook Atlas NationalGeographic 50.00 Geography",
+                "expected": "Books:\nFiction:\nDracula BramStoker 14.00 Horror\nReferenceBook:\nAtlas NationalGeographic 50.00 Geography"
+            },
+            {
+                "input": "5\nNonFiction Cosmos CarlSagan 22.00 Astronomy\nReferenceBook Thesaurus MerriamWebster 35.00 Writing\nFiction Frankenstein MaryShelley 9.99 Gothic\nFiction TheGreatGatsby FScottFitzgerald 13.50 Classic\nReferenceBook ManualOfStyle ChicagoPress 40.00 Editing",
+                "expected": "Books:\nFiction:\nFrankenstein MaryShelley 9.99 Gothic\nTheGreatGatsby FScottFitzgerald 13.50 Classic\nNonFiction:\nCosmos CarlSagan 22.00 Astronomy\nReferenceBook:\nThesaurus MerriamWebster 35.00 Writing\nManualOfStyle ChicagoPress 40.00 Editing"
+            },
+            {
+                "input": "6\nFiction BraveNewWorld AldousHuxley 11.50 Dystopian\nNonFiction HomoDeus YuvalNoahHarari 21.00 Future\nReferenceBook WorldAtlas Collins 55.00 Maps\nFiction 1984 GeorgeOrwell 12.99 Dystopian\nNonFiction ThinkingFastAndSlow DanielKahneman 19.99 Psychology\nReferenceBook GrammarGuide Cambridge 30.00 Language",
+                "expected": "Books:\nFiction:\nBraveNewWorld AldousHuxley 11.50 Dystopian\n1984 GeorgeOrwell 12.99 Dystopian\nNonFiction:\nHomoDeus YuvalNoahHarari 21.00 Future\nThinkingFastAndSlow DanielKahneman 19.99 Psychology\nReferenceBook:\nWorldAtlas Collins 55.00 Maps\nGrammarGuide Cambridge 30.00 Language"
+            },
+            {
+                "input": "4\nFiction AnimalFarm GeorgeOrwell 9.50 Political\nNonFiction BriefHistoryOfTime StephenHawking 20.00 Science\nFiction ToKillAMockingbird HarperLee 14.99 Classic\nReferenceBook StyleGuide MLA 25.00 Academic",
+                "expected": "Books:\nFiction:\nAnimalFarm GeorgeOrwell 9.50 Political\nToKillAMockingbird HarperLee 14.99 Classic\nNonFiction:\nBriefHistoryOfTime StephenHawking 20.00 Science\nReferenceBook:\nStyleGuide MLA 25.00 Academic"
+            }
+        ]
+    },    
+    {
+        "id": 54,
+        "type": "OOP",
+        "difficulty": "Medium",
+        "title": "#abstract04. Quản lý nhân viên công ty",
+        "description": "Xây dựng hệ thống quản lý nhân viên trong công ty. Sử dụng lớp trừu tượng Employee làm lớp cha, các lớp Developer, Manager, và Intern kế thừa từ Employee. Mỗi loại nhân viên có các thuộc tính và hành vi đặc trưng riêng.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 100). Tiếp theo là n dòng, mỗi dòng chứa thông tin về nhân viên (type, name, age, salary, additional info).",
+        "exe_output": "In danh sách nhân viên theo từng loại và chi tiết thông tin của họ.",
+        "testCases": [
+            {
+                "input": "3\nDeveloper Alice 30 80000 Java\nManager Bob 45 100000 HR\nIntern Charlie 20 15000 University",
+                "expected": "Employees:\nDeveloper:\nAlice 30 80000.0 Java\nManager:\nBob 45 100000.0 HR\nIntern:\nCharlie 20 15000.0 University"
+            },
+            {
+                "input": "4\nDeveloper David 28 85000 Python\nManager Eva 40 120000 Finance\nIntern Frank 22 20000 College\nDeveloper Grace 35 95000 C++",
+                "expected": "Employees:\nDeveloper:\nDavid 28 85000.0 Python\nGrace 35 95000.0 C++\nManager:\nEva 40 120000.0 Finance\nIntern:\nFrank 22 20000.0 College"
+            },
+            {
+                "input": "2\nIntern Henry 21 18000 HighSchool\nDeveloper Ivy 25 70000 JavaScript",
+                "expected": "Employees:\nDeveloper:\nIvy 25 70000.0 JavaScript\nIntern:\nHenry 21 18000.0 HighSchool"
+            },
+            {
+                "input": "5\nManager Jack 50 130000 Operations\nDeveloper Kelly 27 78000 PHP\nIntern Leo 23 16000 Training\nManager Megan 42 125000 Marketing\nDeveloper Nancy 31 90000 Ruby",
+                "expected": "Employees:\nDeveloper:\nKelly 27 78000.0 PHP\nNancy 31 90000.0 Ruby\nManager:\nJack 50 130000.0 Operations\nMegan 42 125000.0 Marketing\nIntern:\nLeo 23 16000.0 Training"
+            },
+            {
+                "input": "6\nDeveloper Oscar 29 87000 Kotlin\nManager Pam 39 115000 Sales\nIntern Quinn 20 14000 Internship\nDeveloper Ryan 26 80000 Swift\nManager Sarah 45 135000 Strategy\nIntern Thomas 24 17000 Graduate",
+                "expected": "Employees:\nDeveloper:\nOscar 29 87000.0 Kotlin\nRyan 26 80000.0 Swift\nManager:\nPam 39 115000.0 Sales\nSarah 45 135000.0 Strategy\nIntern:\nQuinn 20 14000.0 Internship\nThomas 24 17000.0 Graduate"
+            },
+            {
+                "input": "4\nDeveloper Uma 33 89000 Go\nManager Victor 48 125000 Logistics\nIntern Wendy 22 15000 Apprenticeship\nManager Xavier 50 140000 R&D",
+                "expected": "Employees:\nDeveloper:\nUma 33 89000.0 Go\nManager:\nVictor 48 125000.0 Logistics\nXavier 50 140000.0 R&D\nIntern:\nWendy 22 15000.0 Apprenticeship"
+            }
+        ]
+    },
+    {
+        "id": 55,
+        "type": "OOP",
+        "difficulty": "Medium",
+        "title": "#abstract05. Quản lý khóa học trực tuyến",
+        "description": "Xây dựng hệ thống quản lý các khóa học trực tuyến. Sử dụng lớp trừu tượng Course làm lớp cha, các lớp ProgrammingCourse, DesignCourse, và MarketingCourse kế thừa từ Course. Mỗi loại khóa học có các thuộc tính và hành vi đặc trưng riêng.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 100). Tiếp theo là n dòng, mỗi dòng chứa thông tin về khóa học (type, courseName, instructor, duration, additional info).",
+        "exe_output": "In danh sách các khóa học theo từng loại và chi tiết thông tin của chúng.",
+        "testCases": [
+            {
+                "input": "3\nProgrammingCourse JavaProgramming Alice 40 Beginner\nDesignCourse GraphicDesign Bob 30 Photoshop\nMarketingCourse DigitalMarketing Charlie 35 SocialMedia",
+                "expected": "Courses:\nProgrammingCourse:\nJavaProgramming Alice 40 Beginner\nDesignCourse:\nGraphicDesign Bob 30 Photoshop\nMarketingCourse:\nDigitalMarketing Charlie 35 SocialMedia"
+            },
+            {
+                "input": "4\nProgrammingCourse PythonProgramming David 50 Intermediate\nDesignCourse UXDesign Eva 25 Figma\nMarketingCourse ContentMarketing Frank 30 Blogging\nProgrammingCourse WebDevelopment Grace 45 Advanced",
+                "expected": "Courses:\nProgrammingCourse:\nPythonProgramming David 50 Intermediate\nWebDevelopment Grace 45 Advanced\nDesignCourse:\nUXDesign Eva 25 Figma\nMarketingCourse:\nContentMarketing Frank 30 Blogging"
+            },
+            {
+                "input": "2\nDesignCourse Illustration Henry 20 AdobeIllustrator\nProgrammingCourse CProgramming Ivy 35 Beginner",
+                "expected": "Courses:\nProgrammingCourse:\nCProgramming Ivy 35 Beginner\nDesignCourse:\nIllustration Henry 20 AdobeIllustrator"
+            },
+            {
+                "input": "5\nMarketingCourse SEOOptimization Jack 30 GoogleTools\nProgrammingCourse DataScience Kelly 60 Advanced\nDesignCourse Animation Leo 40 Maya\nProgrammingCourse MachineLearning Megan 55 Advanced\nMarketingCourse AffiliateMarketing Nora 25 ECommerce",
+                "expected": "Courses:\nProgrammingCourse:\nDataScience Kelly 60 Advanced\nMachineLearning Megan 55 Advanced\nDesignCourse:\nAnimation Leo 40 Maya\nMarketingCourse:\nSEOOptimization Jack 30 GoogleTools\nAffiliateMarketing Nora 25 ECommerce"
+            },
+            {
+                "input": "6\nProgrammingCourse KotlinProgramming Oscar 35 Intermediate\nDesignCourse WebDesign Pam 20 HTMLCSS\nMarketingCourse EmailMarketing Quinn 30 CRMTools\nProgrammingCourse MobileAppDevelopment Ryan 50 Advanced\nMarketingCourse BrandManagement Sarah 40 Branding\nDesignCourse Typography Thomas 15 Fonts",
+                "expected": "Courses:\nProgrammingCourse:\nKotlinProgramming Oscar 35 Intermediate\nMobileAppDevelopment Ryan 50 Advanced\nDesignCourse:\nWebDesign Pam 20 HTMLCSS\nTypography Thomas 15 Fonts\nMarketingCourse:\nEmailMarketing Quinn 30 CRMTools\nBrandManagement Sarah 40 Branding"
+            },
+            {
+                "input": "4\nProgrammingCourse GameDevelopment Uma 70 Unity\nDesignCourse InteriorDesign Victor 45 SketchUp\nMarketingCourse PublicRelations Wendy 35 Communication\nProgrammingCourse DevOps Xavier 40 Cloud",
+                "expected": "Courses:\nProgrammingCourse:\nGameDevelopment Uma 70 Unity\nDevOps Xavier 40 Cloud\nDesignCourse:\nInteriorDesign Victor 45 SketchUp\nMarketingCourse:\nPublicRelations Wendy 35 Communication"
+            }
+        ]
+    },
+    {
+        "id": 56,
+        "type": "OOP",
+        "difficulty": "Advanced",
+        "title": "#abstract06. Quản lý hệ thống đặt vé máy bay",
+        "description": "Xây dựng hệ thống quản lý đặt vé máy bay. Sử dụng lớp trừu tượng Ticket làm lớp cha, các lớp EconomyTicket, BusinessTicket, và FirstClassTicket kế thừa từ Ticket. Mỗi loại vé có các thuộc tính và hành vi đặc trưng riêng. Hệ thống cần hỗ trợ chức năng tìm kiếm vé theo mã chuyến bay hoặc giá vé tối thiểu.",
+        "exe_input": "Dòng đầu tiên là số nguyên n (1 ≤ n ≤ 100), số lượng vé. Tiếp theo là n dòng, mỗi dòng chứa thông tin vé (type, flightCode, passengerName, price, additional info). Dòng cuối cùng chứa truy vấn (searchType, searchValue).",
+        "exe_output": "In danh sách các vé thỏa mãn truy vấn (nếu có) hoặc thông báo không tìm thấy.",
+        "testCases": [
+            {
+                "input": "3\nEconomyTicket VN123 John 100 CheckedBag\nBusinessTicket VN124 Alice 300 LoungeAccess\nFirstClassTicket VN125 Bob 1000 PrivateSuite\nflightCode VN124",
+                "expected": "Tickets:\nVN124 Alice 300 LoungeAccess"
+            },
+            {
+                "input": "4\nEconomyTicket VN201 David 120 ExtraLegroom\nBusinessTicket VN202 Eva 400 PriorityBoarding\nFirstClassTicket VN203 Frank 1500 ChauffeurService\nEconomyTicket VN204 Grace 80 WindowSeat\nprice 300",
+                "expected": "Tickets:\nVN201 David 120 ExtraLegroom\nVN204 Grace 80 WindowSeat"
+            },
+            {
+                "input": "2\nFirstClassTicket VN301 Charlie 2000 PremiumDining\nEconomyTicket VN302 Kelly 90 NoExtras\nflightCode VN303",
+                "expected": "No tickets found."
+            },
+            {
+                "input": "5\nEconomyTicket VN401 Mike 70 Standard\nEconomyTicket VN402 Sarah 150 ExtraBag\nBusinessTicket VN403 Jack 450 ReclinerSeat\nFirstClassTicket VN404 Nora 1200 SpaAccess\nBusinessTicket VN405 Liam 500 FreeMeal\nprice 500",
+                "expected": "Tickets:\nVN401 Mike 70 Standard\nVN402 Sarah 150 ExtraBag\nVN403 Jack 450 ReclinerSeat\nVN405 Liam 500 FreeMeal"
+            },
+            {
+                "input": "6\nEconomyTicket VN501 Oscar 90 FreeSnack\nBusinessTicket VN502 Pam 600 ExtraPrivacy\nFirstClassTicket VN503 Quinn 1800 OnboardChef\nEconomyTicket VN504 Ryan 80 WindowSeat\nFirstClassTicket VN505 Sophia 2000 PrivateSuite\nBusinessTicket VN506 Tom 450 PowerOutlet\nflightCode VN505",
+                "expected": "Tickets:\nVN505 Sophia 2000 PrivateSuite"
+            },
+            {
+                "input": "3\nEconomyTicket VN601 Uma 85 BasicMeal\nBusinessTicket VN602 Victor 550 FastCheckin\nFirstClassTicket VN603 Wendy 1700 BedSuite\nprice 200",
+                "expected": "Tickets:\nVN601 Uma 85 BasicMeal"
+            }
+        ]
+    },
     
+        
 ];
 
 export default exercises;
