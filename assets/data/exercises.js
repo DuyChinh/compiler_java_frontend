@@ -1004,31 +1004,31 @@ const exercises = [
         "testCases": [
             {
                 "input": "3\nLight BedroomLight 60\nFan LivingRoomFan 75\nAirConditioner BedroomAC 1200",
-                "expected": "Devices:\nBedroomAC 1200\nLivingRoomFan 75\nBedroomLight 60\nTotal power consumption: 1335"
+                "expected": "Devices:\nBedroomAC - 1200W\nLivingRoomFan - 75W\nBedroomLight - 60W\nBedroomAC is turned on.\nLivingRoomFan is turned on.\nBedroomLight is turned on.\nTotal power consumption: 1335W"
             },
             {
                 "input": "4\nLight KitchenLight 50\nFan DiningFan 90\nAirConditioner LivingRoomAC 1500\nAirConditioner MasterBedroomAC 2000",
-                "expected": "Devices:\nMasterBedroomAC 2000\nLivingRoomAC 1500\nDiningFan 90\nKitchenLight 50\nTotal power consumption: 3640"
+                "expected": "Devices:\nMasterBedroomAC - 2000W\nLivingRoomAC - 1500W\nDiningFan - 90W\nKitchenLight - 50W\nMasterBedroomAC is turned on.\nLivingRoomAC is turned on.\nDiningFan is turned on.\nKitchenLight is turned on.\nTotal power consumption: 3640W"
             },
             {
                 "input": "5\nLight HallwayLight 40\nFan CeilingFan 80\nLight DeskLamp 25\nAirConditioner GuestRoomAC 1000\nAirConditioner OfficeAC 1800",
-                "expected": "Devices:\nOfficeAC 1800\nGuestRoomAC 1000\nCeilingFan 80\nHallwayLight 40\nDeskLamp 25\nTotal power consumption: 2945"
+                "expected": "Devices:\nOfficeAC - 1800W\nGuestRoomAC - 1000W\nCeilingFan - 80W\nHallwayLight - 40W\nDeskLamp - 25W\nOfficeAC is turned on.\nGuestRoomAC is turned on.\nCeilingFan is turned on.\nHallwayLight is turned on.\nDeskLamp is turned on.\nTotal power consumption: 2945W"
             },
             {
                 "input": "6\nFan OfficeFan 100\nAirConditioner KidsRoomAC 1200\nLight OutdoorLight 70\nFan GarageFan 150\nAirConditioner BasementAC 1700\nLight GardenLight 50",
-                "expected": "Devices:\nBasementAC 1700\nKidsRoomAC 1200\nGarageFan 150\nOfficeFan 100\nOutdoorLight 70\nGardenLight 50\nTotal power consumption: 3270"
+                "expected": "Devices:\nBasementAC - 1700W\nKidsRoomAC - 1200W\nGarageFan - 150W\nOfficeFan - 100W\nOutdoorLight - 70W\nGardenLight - 50W\nBasementAC is turned on.\nKidsRoomAC is turned on.\nGarageFan is turned on.\nOfficeFan is turned on.\nOutdoorLight is turned on.\nGardenLight is turned on.\nTotal power consumption: 3270W"
             },
             {
                 "input": "3\nLight StudyLight 30\nAirConditioner MainHallAC 2000\nFan StudyFan 120",
-                "expected": "Devices:\nMainHallAC 2000\nStudyFan 120\nStudyLight 30\nTotal power consumption: 2150"
+                "expected": "Devices:\nMainHallAC - 2000W\nStudyFan - 120W\nStudyLight - 30W\nMainHallAC is turned on.\nStudyFan is turned on.\nStudyLight is turned on.\nTotal power consumption: 2150W"
             },
             {
                 "input": "7\nLight BalconyLight 20\nFan KitchenFan 95\nAirConditioner SmallRoomAC 900\nLight ClosetLight 15\nFan BedroomFan 110\nAirConditioner LargeRoomAC 2200\nLight EntryLight 35",
-                "expected": "Devices:\nLargeRoomAC 2200\nSmallRoomAC 900\nBedroomFan 110\nKitchenFan 95\nEntryLight 35\nBalconyLight 20\nClosetLight 15\nTotal power consumption: 3365"
+                "expected": "Devices:\nLargeRoomAC - 2200W\nSmallRoomAC - 900W\nBedroomFan - 110W\nKitchenFan - 95W\nEntryLight - 35W\nBalconyLight - 20W\nClosetLight - 15W\nLargeRoomAC is turned on.\nSmallRoomAC is turned on.\nBedroomFan is turned on.\nKitchenFan is turned on.\nEntryLight is turned on.\nBalconyLight is turned on.\nClosetLight is turned on.\nTotal power consumption: 3375W"
             },
             {
                 "input": "4\nAirConditioner OfficeRoomAC 1400\nLight OfficeLight 45\nFan ReceptionFan 125\nLight WaitingRoomLight 50",
-                "expected": "Devices:\nOfficeRoomAC 1400\nReceptionFan 125\nWaitingRoomLight 50\nOfficeLight 45\nTotal power consumption: 1620"
+                "expected": "Devices:\nOfficeRoomAC - 1400W\nReceptionFan - 125W\nWaitingRoomLight - 50W\nOfficeLight - 45W\nOfficeRoomAC is turned on.\nReceptionFan is turned on.\nWaitingRoomLight is turned on.\nOfficeLight is turned on.\nTotal power consumption: 1620W"
             }
         ]
     },
