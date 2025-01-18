@@ -864,23 +864,23 @@ const exercises = [
         "testCases": [
             {
                 "input": "3\nManager John 60000 15000\nWorker Jane 35000 10 250\nWorker Emily 40000 15 300",
-                "expected": "Total salary: 106500.00"
+                "expected": "Total salary: 157000.00"
             },
             {
                 "input": "4\nManager Mike 80000 20000\nManager Sarah 75000 18000\nWorker Tom 50000 25 150\nWorker Lucy 45000 30 100",
-                "expected": "Total salary: 142500.00"
+                "expected": "Total Salary: 294750.00"
             },
             {
                 "input": "2\nManager Anna 55000 12000\nWorker Peter 32000 40 50",
-                "expected": "Total salary: 69000.00"
+                "expected": "Total Salary: 101000.00"
             },
             {
                 "input": "5\nManager Harry 90000 30000\nWorker Sam 25000 35 80\nWorker Kate 40000 20 150\nManager Robert 85000 25000\nWorker Lily 50000 10 200",
-                "expected": "Total salary: 192500.00"
+                "expected": "Total Salary: 352800.00"
             },
             {
                 "input": "3\nManager Victoria 70000 20000\nWorker Chris 48000 15 120\nWorker Sophie 45000 25 80",
-                "expected": "Total salary: 113300.00"
+                "expected": "Total Salary: 186800.00"
             }
         ] 
     },
