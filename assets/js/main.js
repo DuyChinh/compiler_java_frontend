@@ -12,7 +12,7 @@ const loader_status = document.querySelector(".loader_status");
 const language = document.getElementById("language");
 const res_status_succ = document.querySelector(".res_status_success");
 const res_status_err =  document.querySelector(".res_status_error");
-const url = "https://compilerbackend-production-7d4b.up.railway.app";
+const url = "https://compiler-java-39wz.onrender.com";
 
 // Dữ liệu ví dụ về bài tập
 const filterByType = document.getElementById("filterByType");
